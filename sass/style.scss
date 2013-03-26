@@ -1,0 +1,24 @@
+/*!
+Theme Name: Your Theme
+Author: Brad Parbs
+Author URI: http://bradparbs.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.2
+textdomain: wolf_starter;
+*/
+
+@import "reset";         
+@import "s";
+@import "foundation";
+@import "settings";
+@import "layout";
+@import "typography";
+@import "forms";
+@import "buttons";
+@import "header";
+@import "footer";
+@import "mixins";
+@import "helpers";
+
+@import "comments";
