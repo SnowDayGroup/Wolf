@@ -1,8 +1,6 @@
 THIS IS WOLF.
 ===
 
-![wolf](https://raw.github.com/bradp/Wolf/master/screenshot.png)
-
 ##Wolf is a starter theme for WordPress.
 *You can take Wolf and hack away on it. No need for a parent theme.*
 
