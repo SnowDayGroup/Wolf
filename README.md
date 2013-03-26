@@ -1,6 +1,8 @@
 THIS IS WOLF.
 ===
 
+![wolf](https://raw.github.com/bradp/Wolf/master/screenshot.png)
+
 ##Wolf is a starter theme for WordPress.
 *You can take Wolf and hack away on it. No need for a parent theme.*
 
@@ -37,6 +39,7 @@ Inspiration and Code Borrowed:
 [wp-talon](https://github.com/dustyf/wp-talon), [Bones](http://themble.com/bones/), [Tincap](https://github.com/bradthomas127/tincap), [blueox](https://github.com/AaronHolbrook/blueox)
 
 Photo Credit: [Dennis Matheson](http://www.flickr.com/photos/dennis_matheson/4332300031/)
+
 ---
 
 
