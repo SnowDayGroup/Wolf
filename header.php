@@ -35,10 +35,10 @@
 		<div class="row">
 			<header id="masthead" class="site-header" role="banner">
 				<?php tha_header_top(); ?>
-				<hgroup>
+				<div class="site-branding">
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				</hgroup>
+				</div>
 
 				<nav id="site-navigation" class="site-navigation main-navigation" role="navigation">
 					<h1 class="screen-reader-text"><?php _e( 'Menu', 'wolf_starter' ); ?></h1>

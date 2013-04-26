@@ -27,7 +27,7 @@ get_header();
 								$metadata['width'],
 								$metadata['height'],
 								get_permalink( $post->post_parent ),
-								esc_attr( get_the_title( $post->post_parent ) ),
+								esc_attr( strip_tags( get_the_title( $post->post_parent ) ) ),
 								get_the_title( $post->post_parent )
 							);
 						?>
@@ -35,8 +35,8 @@ get_header();
 					</div><!-- .entry-meta -->
 
 					<nav role="navigation" id="image-navigation" class="navigation-image">
-						<div class="previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'wolf_starter' ) ); ?></div>
-						<div class="next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'wolf_starter' ) ); ?></div>
+						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'wolf_starter' ) ); ?></div>
+						<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'wolf_starter' ) ); ?></div>
 					</nav><!-- #image-navigation -->
 				</header><!-- .entry-header -->
 
@@ -76,7 +76,7 @@ get_header();
 								}
 							?>
 
-							<a href="<?php echo $next_attachment_url; ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php
+							<a href="<?php echo $next_attachment_url; ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
 								$attachment_size = apply_filters( 'wolf_starter_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
 								echo wp_get_attachment_image( $post->ID, $attachment_size );
 							?></a>
@@ -90,7 +90,12 @@ get_header();
 					</div><!-- .entry-attachment -->
 
 					<?php the_content(); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'wolf_starter' ), 'after' => '</div>' ) ); ?>
+					<?php 
+						wp_link_pages( array( 
+							'before' => '<div class="page-links">' . __( 'Pages:', 'wolf_starter' ), 
+							'after' => '</div>',
+						) ); 
+					?>
 
 				</div><!-- .entry-content -->
 
