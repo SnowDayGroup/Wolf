@@ -8,8 +8,8 @@
 require ( get_template_directory() . '/inc/htaccess.php' ); // HTML5 Boilerplate .htaccess
 require ( get_template_directory() . '/inc/widgets.php' );  // Sidebars and widgets
 require ( get_template_directory() . '/inc/scripts.php' );  // Scripts and stylesheets
-require( get_template_directory() . '/inc/tha-hooks.php' ); // Load Theme Hook Alliance files
-require( get_template_directory() . '/inc/jetpack.php' );   // Load Jetpack compatibility file.
+require ( get_template_directory() . '/inc/tha-hooks.php' ); // Load Theme Hook Alliance files
+require ( get_template_directory() . '/inc/jetpack.php' );   // Load Jetpack compatibility file.
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -26,7 +26,7 @@ function wolf_starter_setup() {
     require( get_template_directory() . '/inc/extras.php' ); // Custom functions that act independently of the theme templates
     require( get_template_directory() . '/inc/customizer.php' ); //Customizer additions
 
-    add_theme_support('h5bp-htaccess'); // Enable HTML5 Boilerplate's .htaccess
+    add_theme_support( 'h5bp-htaccess' ); // Enable HTML5 Boilerplate's .htaccess
     add_theme_support( 'automatic-feed-links' ); //Add default posts and comments RSS feed links to head
     add_theme_support( 'post-thumbnails' ); //Enable support for Post Thumbnails
     add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) ); //Enable support for Post Formats
