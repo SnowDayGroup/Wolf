@@ -13,6 +13,8 @@ WOLF is based on _S ("Underscores"), Copyright (c) 2012 Automattic, Inc. http://
 @import "reset";         
 @import "s";
 @import "foundation";
+@import "mixins";
+@import "helpers";
 @import "settings";
 @import "layout";
 @import "typography";
@@ -20,7 +22,5 @@ WOLF is based on _S ("Underscores"), Copyright (c) 2012 Automattic, Inc. http://
 @import "buttons";
 @import "header";
 @import "footer";
-@import "mixins";
-@import "helpers";
 
 @import "comments";
