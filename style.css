@@ -9,6 +9,7 @@ textdomain: wolf_starter;
 
 WOLF is based on _S ("Underscores"), Copyright (c) 2012 Automattic, Inc. http://underscores.me/
 */
+/* Reset, _s, Grid System */
 /* 
 * CSS reset. Slightly modified version of the normalize.css reset - http://github.com/necolas/normalize.css 
 * Modifications by Scott Lyttle
@@ -457,8 +458,51 @@ img { -ms-interpolation-mode: bicubic; }
 
 .row, .clearfix { zoom: 1; }
 
-/* =Menu
+/* =Responsive Structure
 ----------------------------------------------- */
+@media only screen and (max-width: 480px) { /* Style adjustments for viewports 480px and under go here */
+  .row { text-align: center; } }
+@media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+  .container { min-width: 0; margin-left: 0; margin-right: 0; }
+  .row { width: 100%; min-width: 0; margin-left: 0; margin-right: 0; }
+  .row .row .column, .row .row .columns { padding: 0; }
+  .column, .columns { width: auto !important; float: none; margin-left: 0; margin-right: 0; }
+  .column:last-child, .columns:last-child { margin-right: 0; float: none; }
+  .row .row .column, .row .row .columns { padding: 0; }
+  .column, .columns { width: auto !important; float: none; margin-left: 0px; margin-right: 0px; }
+  .column:last-child, .columns:last-child { margin-right: 0; float: none; }
+  [class*="column"] + [class*="column"]:last-child { float: none; }
+  [class*="column"]:before, [class*="column"]:after { display: table; }
+  [class*="column"]:after { clear: both; }
+  .push_one, .push_two, .push_three, .push_four, .push_five, .push_six, .push_seven, .push_eight, .push_nine, .push_ten, .push_eleven, .centered { margin-left: 0% !important; } }
+/* =IE Fixes
+----------------------------------------------- */
+/* =IE7 and below
+----------------- */
+.lt-ie8 .clearfix { height: 1%; }
+
+/* Collection of Mixins */
+/*------------------------------------*\ helpers
+\*------------------------------------*/
+/* hide from everything ------------- */
+/* clearfix ------------------------- */
+/* Variables */
+/* General Styling */
+.hentry { margin: 0 0 1.5em; }
+
+.entry-meta { clear: both; }
+
+.byline { display: none; }
+
+.single .byline, .group-blog .byline { display: inline; }
+
+.entry-content, .entry-summary { margin: 1.5em 0 0; }
+
+.page-links { clear: both; margin: 0 0 1.5em; }
+
+/* Asides */
+.blog .format-aside .entry-title, .archive .format-aside .entry-title { display: none; }
+
 .main-navigation { clear: both; display: block; float: left; width: 100%; }
 
 .main-navigation ul { list-style: none; margin: 0; padding-left: 0; }
@@ -480,26 +524,12 @@ img { -ms-interpolation-mode: bicubic; }
 
 .main-small-navigation .menu { display: none; }
 
-/* =Content
------------------------------------------------ */
-.hentry { margin: 0 0 1.5em; }
+#content .site-navigation { margin: 0 0 1.5em; overflow: hidden; }
 
-.entry-meta { clear: both; }
+#content .nav-previous { float: left; width: 50%; }
 
-.byline { display: none; }
+#content .nav-next { float: right; text-align: right; width: 50%; }
 
-.single .byline, .group-blog .byline { display: inline; }
-
-.entry-content, .entry-summary { margin: 1.5em 0 0; }
-
-.page-links { clear: both; margin: 0 0 1.5em; }
-
-/* =Asides
------------------------------------------------ */
-.blog .format-aside .entry-title, .archive .format-aside .entry-title { display: none; }
-
-/* =Media
------------------------------------------------ */
 .site-header img, .entry-content img, .comment-content img, .widget img { max-width: 100%; /* Fluid images for posts, comments, and widgets */ }
 
 .site-header img, .entry-content img, img[class*="align"], img[class*="wp-image-"] { height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
@@ -527,56 +557,16 @@ img { -ms-interpolation-mode: bicubic; }
 /* Make sure embeds and iframes fit their containers */
 embed, iframe, object { max-width: 100%; }
 
-/* =Navigation
------------------------------------------------ */
-#content .site-navigation { margin: 0 0 1.5em; overflow: hidden; }
+/* remove margin from nested lists -- */
+li > ul, li > ol { margin-bottom: 0; }
 
-#content .nav-previous { float: left; width: 50%; }
+/* prevents long titles from breaking */
+* { -ms-word-wrap: break-word; word-wrap: break-word; }
 
-#content .nav-next { float: right; text-align: right; width: 50%; }
+/* Page / Post / Ect - Specific */
+.comment-author img { border-radius: 50%; float: left; padding: .2em; }
 
-/* =Comments
------------------------------------------------ */
-/* =Widgets
------------------------------------------------ */
 .widget { margin: 0 0 1.5em; }
 
 /* Search widget */
 #searchsubmit { display: none; }
-
-/* =Responsive Structure
------------------------------------------------ */
-@media only screen and (max-width: 480px) { /* Style adjustments for viewports 480px and under go here */
-  .row { text-align: center; } }
-@media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
-  .container { min-width: 0; margin-left: 0; margin-right: 0; }
-  .row { width: 100%; min-width: 0; margin-left: 0; margin-right: 0; }
-  .row .row .column, .row .row .columns { padding: 0; }
-  .column, .columns { width: auto !important; float: none; margin-left: 0; margin-right: 0; }
-  .column:last-child, .columns:last-child { margin-right: 0; float: none; }
-  .row .row .column, .row .row .columns { padding: 0; }
-  .column, .columns { width: auto !important; float: none; margin-left: 0px; margin-right: 0px; }
-  .column:last-child, .columns:last-child { margin-right: 0; float: none; }
-  [class*="column"] + [class*="column"]:last-child { float: none; }
-  [class*="column"]:before, [class*="column"]:after { display: table; }
-  [class*="column"]:after { clear: both; }
-  .push_one, .push_two, .push_three, .push_four, .push_five, .push_six, .push_seven, .push_eight, .push_nine, .push_ten, .push_eleven, .centered { margin-left: 0% !important; } }
-/* =IE Fixes
------------------------------------------------ */
-/* =IE8 and below
------------------ */
-/* =IE7 and below
------------------ */
-.lt-ie8 .clearfix { height: 1%; }
-
-/*------------------------------------*\ helpers
-\*------------------------------------*/
-/* hide from everything ------------- */
-/* clearfix ------------------------- */
-/* remove margin from nested lists -- */
-li > ul, li > ol { margin-bottom: 0; }
-
-* { word-wrap: break-word; }
-
-/* prevents long titles from breaking */
-.comment-author img { border-radius: 50%; float: left; padding: .2em; }

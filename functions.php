@@ -5,11 +5,11 @@
  * @package wolf_starter
  */
 
-require ( get_template_directory() . '/inc/htaccess.php' ); // HTML5 Boilerplate .htaccess
-require ( get_template_directory() . '/inc/widgets.php' );  // Sidebars and widgets
-require ( get_template_directory() . '/inc/scripts.php' );  // Scripts and stylesheets
-require ( get_template_directory() . '/inc/tha-hooks.php' ); // Load Theme Hook Alliance files
-require ( get_template_directory() . '/inc/jetpack.php' );   // Load Jetpack compatibility file.
+require get_template_directory() . '/inc/htaccess.php'; // HTML5 Boilerplate .htaccess
+require get_template_directory() . '/inc/widgets.php';  // Sidebars and widgets
+require get_template_directory() . '/inc/scripts.php';  // Scripts and stylesheets
+require get_template_directory() . '/inc/tha-hooks.php'; // Load Theme Hook Alliance files
+require get_template_directory() . '/inc/jetpack.php';   // Load Jetpack compatibility file.
 
 /**
  * Set the content width based on the theme's design and stylesheet.

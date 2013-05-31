@@ -1,0 +1,11 @@
+/* remove margin from nested lists -- */
+li > ul,
+li > ol {
+    margin-bottom:0;
+}
+
+/* prevents long titles from breaking */
+* {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
