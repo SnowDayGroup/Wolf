@@ -18,3 +18,11 @@
 	font-size: 0px + $size;
 	font-size: $size / $doc-font-size +rem;
 }
+
+@function rem($size) {
+	@return #{$size/$doc-font-size}rem
+}
+
+@function em($size) {
+	@return #{$size/$doc-font-size}em
+}
