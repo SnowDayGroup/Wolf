@@ -54,3 +54,4 @@ function wolf_register_required_plugins(){
 }
 add_action( 'tgmpa_register', 'wolf_register_required_plugins' );
 */
+}
