@@ -344,108 +344,108 @@ embed, iframe, object { max-width: 100%; }
 ----------------------------------------------- */
 .container { padding: 0px 20px; }
 
-.row { width: 100%; max-width: 940px; min-width: 720px; margin: 0 auto; }
+.row, #main, #colophon { width: 100%; max-width: 940px; min-width: 720px; margin: 0 auto; }
 
 /* To fix the grid into a different size, set max-width to your desired width */
-.row .row { min-width: 0px; }
+.row .row, #main .row, #colophon .row, .row #main, #main #main, #colophon #main, .row #colophon, #main #colophon, #colophon #colophon { min-width: 0px; }
 
-.column, .columns { margin-left: 2.127663%; box-sizing: border-box; float: left; min-height: 1px; position: relative; }
+.column, .columns, #primary, #secondary, .error404 #primary, .site-info, .attachment #primary { margin-left: 2.127663%; box-sizing: border-box; float: left; min-height: 1px; position: relative; }
 
-.column:first-child, .columns:first-child, .alpha, .omega { margin-left: 0px; }
+.column:first-child, .columns:first-child, #primary:first-child, #secondary:first-child, .site-info:first-child, .alpha, .omega { margin-left: 0px; }
 
 [class*="column"] + [class*="column"]:last-child { float: right; }
 
-.row .one.columns { width: 6.382989%; }
+.row .one.columns, #main .one.columns, #colophon .one.columns, .row .one#primary, #main .one#primary, #colophon .one#primary, .row .one#secondary, #main .one#secondary, #colophon .one#secondary, .row .one.site-info, #main .one.site-info, #colophon .one.site-info { width: 6.382989%; }
 
-.row .two.columns { width: 14.893641%; }
+.row .two.columns, #main .two.columns, #colophon .two.columns, .row .two#primary, #main .two#primary, #colophon .two#primary, .row .two#secondary, #main .two#secondary, #colophon .two#secondary, .row .two.site-info, #main .two.site-info, #colophon .two.site-info { width: 14.893641%; }
 
-.row .three.columns { width: 23.404293%; }
+.row .three.columns, #main .three.columns, #colophon .three.columns, .row .three#primary, #main .three#primary, #colophon .three#primary, .row .three#secondary, #main .three#secondary, #colophon .three#secondary, .row .three.site-info, #main .three.site-info, #colophon .three.site-info { width: 23.404293%; }
 
-.row .four.columns { width: 31.914945%; }
+.row .four.columns, #main .four.columns, #colophon .four.columns, .row .four#primary, #main .four#primary, #colophon .four#primary, .row #secondary, #main #secondary, #colophon #secondary, .row .four.site-info, #main .four.site-info, #colophon .four.site-info, #main .site-info#secondary, #colophon .site-info#secondary { width: 31.914945%; }
 
-.row .five.columns { width: 40.425597%; }
+.row .five.columns, #main .five.columns, #colophon .five.columns, .row .five#primary, #main .five#primary, #colophon .five#primary, .row .five#secondary, #main .five#secondary, #colophon .five#secondary, .row .five.site-info, #main .five.site-info, #colophon .five.site-info { width: 40.425597%; }
 
-.row .six.columns { width: 48.936249%; }
+.row .six.columns, #main .six.columns, #colophon .six.columns, .row .six#primary, #main .six#primary, #colophon .six#primary, .row .six#secondary, #main .six#secondary, #colophon .six#secondary, .row .six.site-info, #main .six.site-info, #colophon .six.site-info { width: 48.936249%; }
 
-.row .seven.columns { width: 57.446901%; }
+.row .seven.columns, #main .seven.columns, #colophon .seven.columns, .row .seven#primary, #main .seven#primary, #colophon .seven#primary, .row .seven#secondary, #main .seven#secondary, #colophon .seven#secondary, .row .seven.site-info, #main .seven.site-info, #colophon .seven.site-info { width: 57.446901%; }
 
-.row .eight.columns { width: 65.957553%; }
+.row .eight.columns, #main .eight.columns, #colophon .eight.columns, .row #primary, #main #primary, #colophon #primary, .row .eight#secondary, #main .eight#secondary, #colophon .eight#secondary, .row .error404 #primary, .error404 .row #primary, #main .error404 #primary, .error404 #main #primary, #colophon .error404 #primary, .error404 #colophon #primary, .row .eight.site-info, #main .eight.site-info, #colophon .eight.site-info, #main .site-info#primary, #colophon .site-info#primary, .row .attachment #primary, .attachment .row #primary, #main .attachment #primary, .attachment #main #primary, #colophon .attachment #primary, .attachment #colophon #primary { width: 65.957553%; }
 
-.row .nine.columns { width: 74.468205%; }
+.row .nine.columns, #main .nine.columns, #colophon .nine.columns, .row .nine#primary, #main .nine#primary, #colophon .nine#primary, .row .nine#secondary, #main .nine#secondary, #colophon .nine#secondary, .row .nine.site-info, #main .nine.site-info, #colophon .nine.site-info { width: 74.468205%; }
 
-.row .ten.columns { width: 82.978857%; }
+.row .ten.columns, #main .ten.columns, #colophon .ten.columns, .row .ten#primary, #main .ten#primary, #colophon .ten#primary, .row .ten#secondary, #main .ten#secondary, #colophon .ten#secondary, .row .ten.site-info, #main .ten.site-info, #colophon .ten.site-info { width: 82.978857%; }
 
-.row .eleven.columns { width: 91.489509%; }
+.row .eleven.columns, #main .eleven.columns, #colophon .eleven.columns, .row .eleven#primary, #main .eleven#primary, #colophon .eleven#primary, .row .eleven#secondary, #main .eleven#secondary, #colophon .eleven#secondary, .row .eleven.site-info, #main .eleven.site-info, #colophon .eleven.site-info { width: 91.489509%; }
 
-.row .twelve.columns { width: 100%; }
+.row .twelve.columns, #main .twelve.columns, #colophon .twelve.columns, .row .twelve#primary, #main .twelve#primary, #colophon .twelve#primary, .row .error404 #primary, .error404 .row #primary, #main .error404 #primary, .error404 #main #primary, #colophon .error404 #primary, .error404 #colophon #primary, .row #primary.site-info, #main #primary.site-info, #colophon #primary.site-info, .row .attachment #primary, .attachment .row #primary, #main .attachment #primary, .attachment #main #primary, #colophon .attachment #primary, .attachment #colophon #primary, .row .twelve#secondary, #main .twelve#secondary, #colophon .twelve#secondary, .row #secondary.site-info, #main #secondary.site-info, #colophon #secondary.site-info, .row .site-info, #main .site-info, #colophon .site-info { width: 100%; }
 
 /*** Formula: Column Width + Twice the Default Margin ***/
-.row .push_one { margin-left: 10.638315%; }
+.row .push_one, #main .push_one, #colophon .push_one { margin-left: 10.638315%; }
 
-.row .push_two { margin-left: 19.148967%; }
+.row .push_two, #main .push_two, #colophon .push_two { margin-left: 19.148967%; }
 
-.row .push_three { margin-left: 27.659619%; }
+.row .push_three, #main .push_three, #colophon .push_three { margin-left: 27.659619%; }
 
-.row .push_four { margin-left: 36.170271%; }
+.row .push_four, #main .push_four, #colophon .push_four { margin-left: 36.170271%; }
 
-.row .push_five { margin-left: 44.680923%; }
+.row .push_five, #main .push_five, #colophon .push_five { margin-left: 44.680923%; }
 
-.row .push_six { margin-left: 53.191575%; }
+.row .push_six, #main .push_six, #colophon .push_six { margin-left: 53.191575%; }
 
-.row .push_seven { margin-left: 61.702227%; }
+.row .push_seven, #main .push_seven, #colophon .push_seven { margin-left: 61.702227%; }
 
-.row .push_eight { margin-left: 70.212879%; }
+.row .push_eight, #main .push_eight, #colophon .push_eight { margin-left: 70.212879%; }
 
-.row .push_nine { margin-left: 78.723531%; }
+.row .push_nine, #main .push_nine, #colophon .push_nine { margin-left: 78.723531%; }
 
-.row .push_ten { margin-left: 87.234183%; }
+.row .push_ten, #main .push_ten, #colophon .push_ten { margin-left: 87.234183%; }
 
 /*.row .push_eleven     { margin-left: 95.744835%;  }*/
 /* Centering Columns is fun */
-.row .one.centered { margin-left: 46.808586%; }
+.row .one.centered, #main .one.centered, #colophon .one.centered { margin-left: 46.808586%; }
 
-.row .two.centered { margin-left: 42.55326%; }
+.row .two.centered, #main .two.centered, #colophon .two.centered { margin-left: 42.55326%; }
 
-.row .three.centered { margin-left: 38.297934%; }
+.row .three.centered, #main .three.centered, #colophon .three.centered { margin-left: 38.297934%; }
 
-.row .four.centered { margin-left: 34.042608%; }
+.row .four.centered, #main .four.centered, #colophon .four.centered, .row .centered#secondary, #main .centered#secondary, #colophon .centered#secondary { margin-left: 34.042608%; }
 
-.row .five.centered { margin-left: 29.787282%; }
+.row .five.centered, #main .five.centered, #colophon .five.centered { margin-left: 29.787282%; }
 
-.row .six.centered { margin-left: 25.531956%; }
+.row .six.centered, #main .six.centered, #colophon .six.centered { margin-left: 25.531956%; }
 
-.row .seven.centered { margin-left: 21.27663%; }
+.row .seven.centered, #main .seven.centered, #colophon .seven.centered { margin-left: 21.27663%; }
 
-.row .eight.centered { margin-left: 17.021304%; }
+.row .eight.centered, #main .eight.centered, #colophon .eight.centered, .row .centered#primary, #main .centered#primary, #colophon .centered#primary { margin-left: 17.021304%; }
 
-.row .nine.centered { margin-left: 12.765978%; }
+.row .nine.centered, #main .nine.centered, #colophon .nine.centered { margin-left: 12.765978%; }
 
-.row .ten.centered { margin-left: 8.510652%; }
+.row .ten.centered, #main .ten.centered, #colophon .ten.centered { margin-left: 8.510652%; }
 
-.row .eleven.centered { margin-left: 4.255326%; }
+.row .eleven.centered, #main .eleven.centered, #colophon .eleven.centered { margin-left: 4.255326%; }
 
 /*** Formula: Column Width + Default Margin ***/
-.row .push_one:first-child { margin-left: 8.510652%; }
+.row .push_one:first-child, #main .push_one:first-child, #colophon .push_one:first-child { margin-left: 8.510652%; }
 
-.row .push_two:first-child { margin-left: 17.021304%; }
+.row .push_two:first-child, #main .push_two:first-child, #colophon .push_two:first-child { margin-left: 17.021304%; }
 
-.row .push_three:first-child { margin-left: 25.531956%; }
+.row .push_three:first-child, #main .push_three:first-child, #colophon .push_three:first-child { margin-left: 25.531956%; }
 
-.row .push_four:first-child { margin-left: 34.042608%; }
+.row .push_four:first-child, #main .push_four:first-child, #colophon .push_four:first-child { margin-left: 34.042608%; }
 
-.row .push_five:first-child { margin-left: 42.55326%; }
+.row .push_five:first-child, #main .push_five:first-child, #colophon .push_five:first-child { margin-left: 42.55326%; }
 
-.row .push_six:first-child { margin-left: 51.063912%; }
+.row .push_six:first-child, #main .push_six:first-child, #colophon .push_six:first-child { margin-left: 51.063912%; }
 
-.row .push_seven:first-child { margin-left: 59.574564%; }
+.row .push_seven:first-child, #main .push_seven:first-child, #colophon .push_seven:first-child { margin-left: 59.574564%; }
 
-.row .push_eight:first-child { margin-left: 68.085216%; }
+.row .push_eight:first-child, #main .push_eight:first-child, #colophon .push_eight:first-child { margin-left: 68.085216%; }
 
-.row .push_nine:first-child { margin-left: 76.596868%; }
+.row .push_nine:first-child, #main .push_nine:first-child, #colophon .push_nine:first-child { margin-left: 76.596868%; }
 
-.row .push_ten:first-child { margin-left: 85.10652%; }
+.row .push_ten:first-child, #main .push_ten:first-child, #colophon .push_ten:first-child { margin-left: 85.10652%; }
 
-.row .push_eleven:first-child { margin-left: 93.617172%; }
+.row .push_eleven:first-child, #main .push_eleven:first-child, #colophon .push_eleven:first-child { margin-left: 93.617172%; }
 
 img, object, embed { max-width: 100%; height: auto; }
 
@@ -454,25 +454,25 @@ img { -ms-interpolation-mode: bicubic; }
 #map_canvas img, .map_canvas img { max-width: none!important; }
 
 /* Nicolas Gallagher's micro clearfix */
-.row:before, .row:after, .clearfix:before, .clearfix:after { content: ""; display: table; }
+.row:before, #main:before, #colophon:before, .row:after, #main:after, #colophon:after, .clearfix:before, .clearfix:after { content: ""; display: table; }
 
-.row:after, .clearfix:after { clear: both; }
+.row:after, #main:after, #colophon:after, .clearfix:after { clear: both; }
 
-.row, .clearfix { zoom: 1; }
+.row, #main, #colophon, .clearfix { zoom: 1; }
 
 /* =Responsive Structure
 ----------------------------------------------- */
 @media only screen and (max-width: 480px) { /* Style adjustments for viewports 480px and under go here */
-  .row { text-align: center; } }
+  .row, #main, #colophon { text-align: center; } }
 @media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
   .container { min-width: 0; margin-left: 0; margin-right: 0; }
-  .row { width: 100%; min-width: 0; margin-left: 0; margin-right: 0; }
-  .row .row .column, .row .row .columns { padding: 0; }
-  .column, .columns { width: auto !important; float: none; margin-left: 0; margin-right: 0; }
-  .column:last-child, .columns:last-child { margin-right: 0; float: none; }
-  .row .row .column, .row .row .columns { padding: 0; }
-  .column, .columns { width: auto !important; float: none; margin-left: 0px; margin-right: 0px; }
-  .column:last-child, .columns:last-child { margin-right: 0; float: none; }
+  .row, #main, #colophon { width: 100%; min-width: 0; margin-left: 0; margin-right: 0; }
+  .row .row .column, #main .row .column, #colophon .row .column, .row #main .column, #main #main .column, #colophon #main .column, .row #colophon .column, #main #colophon .column, #colophon #colophon .column, .row .row .columns, #main .row .columns, #colophon .row .columns, .row #main .columns, #main #main .columns, #colophon #main .columns, .row #colophon .columns, #main #colophon .columns, #colophon #colophon .columns, .row .row #primary, #main .row #primary, #colophon .row #primary, .row #main #primary, #main #main #primary, #colophon #main #primary, .row #colophon #primary, #main #colophon #primary, #colophon #colophon #primary, .row .row #secondary, #main .row #secondary, #colophon .row #secondary, .row #main #secondary, #main #main #secondary, #colophon #main #secondary, .row #colophon #secondary, #main #colophon #secondary, #colophon #colophon #secondary, .row .row .error404 #primary, .error404 .row .row #primary, #main .row .error404 #primary, .error404 #main .row #primary, #colophon .row .error404 #primary, .error404 #colophon .row #primary, .row #main .error404 #primary, .error404 .row #main #primary, #main #main .error404 #primary, .error404 #main #main #primary, #colophon #main .error404 #primary, .error404 #colophon #main #primary, .row #colophon .error404 #primary, .error404 .row #colophon #primary, #main #colophon .error404 #primary, .error404 #main #colophon #primary, #colophon #colophon .error404 #primary, .error404 #colophon #colophon #primary, .row .row .site-info, #main .row .site-info, #colophon .row .site-info, .row #main .site-info, #main #main .site-info, #colophon #main .site-info, .row #colophon .site-info, #main #colophon .site-info, #colophon #colophon .site-info, .row .row .attachment #primary, .attachment .row .row #primary, #main .row .attachment #primary, .attachment #main .row #primary, #colophon .row .attachment #primary, .attachment #colophon .row #primary, .row #main .attachment #primary, .attachment .row #main #primary, #main #main .attachment #primary, .attachment #main #main #primary, #colophon #main .attachment #primary, .attachment #colophon #main #primary, .row #colophon .attachment #primary, .attachment .row #colophon #primary, #main #colophon .attachment #primary, .attachment #main #colophon #primary, #colophon #colophon .attachment #primary, .attachment #colophon #colophon #primary { padding: 0; }
+  .column, .columns, #primary, #secondary, .error404 #primary, .site-info, .attachment #primary { width: auto !important; float: none; margin-left: 0; margin-right: 0; }
+  .column:last-child, .columns:last-child, #primary:last-child, #secondary:last-child, .error404 #primary:last-child, .site-info:last-child, .attachment #primary:last-child { margin-right: 0; float: none; }
+  .row .row .column, #main .row .column, #colophon .row .column, .row #main .column, #main #main .column, #colophon #main .column, .row #colophon .column, #main #colophon .column, #colophon #colophon .column, .row .row .columns, #main .row .columns, #colophon .row .columns, .row #main .columns, #main #main .columns, #colophon #main .columns, .row #colophon .columns, #main #colophon .columns, #colophon #colophon .columns, .row .row #primary, #main .row #primary, #colophon .row #primary, .row #main #primary, #main #main #primary, #colophon #main #primary, .row #colophon #primary, #main #colophon #primary, #colophon #colophon #primary, .row .row #secondary, #main .row #secondary, #colophon .row #secondary, .row #main #secondary, #main #main #secondary, #colophon #main #secondary, .row #colophon #secondary, #main #colophon #secondary, #colophon #colophon #secondary, .row .row .error404 #primary, .error404 .row .row #primary, #main .row .error404 #primary, .error404 #main .row #primary, #colophon .row .error404 #primary, .error404 #colophon .row #primary, .row #main .error404 #primary, .error404 .row #main #primary, #main #main .error404 #primary, .error404 #main #main #primary, #colophon #main .error404 #primary, .error404 #colophon #main #primary, .row #colophon .error404 #primary, .error404 .row #colophon #primary, #main #colophon .error404 #primary, .error404 #main #colophon #primary, #colophon #colophon .error404 #primary, .error404 #colophon #colophon #primary, .row .row .site-info, #main .row .site-info, #colophon .row .site-info, .row #main .site-info, #main #main .site-info, #colophon #main .site-info, .row #colophon .site-info, #main #colophon .site-info, #colophon #colophon .site-info, .row .row .attachment #primary, .attachment .row .row #primary, #main .row .attachment #primary, .attachment #main .row #primary, #colophon .row .attachment #primary, .attachment #colophon .row #primary, .row #main .attachment #primary, .attachment .row #main #primary, #main #main .attachment #primary, .attachment #main #main #primary, #colophon #main .attachment #primary, .attachment #colophon #main #primary, .row #colophon .attachment #primary, .attachment .row #colophon #primary, #main #colophon .attachment #primary, .attachment #main #colophon #primary, #colophon #colophon .attachment #primary, .attachment #colophon #colophon #primary { padding: 0; }
+  .column, .columns, #primary, #secondary, .error404 #primary, .site-info, .attachment #primary { width: auto !important; float: none; margin-left: 0px; margin-right: 0px; }
+  .column:last-child, .columns:last-child, #primary:last-child, #secondary:last-child, .error404 #primary:last-child, .site-info:last-child, .attachment #primary:last-child { margin-right: 0; float: none; }
   [class*="column"] + [class*="column"]:last-child { float: none; }
   [class*="column"]:before, [class*="column"]:after { display: table; }
   [class*="column"]:after { clear: both; }

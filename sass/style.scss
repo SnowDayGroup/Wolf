@@ -16,6 +16,8 @@ WOLF is based on _S ("Underscores"), Copyright (c) 2012 Automattic, Inc. http://
 /* #@import "base/normalize"; Uncomment and comment out the above line for normalize, instead of reset */ 
 @import "base/s";
 @import "base/foundation-grid";
+@import "base/grid-extends";
+
 
 /* Collection of Mixins */
 @import "modules/mixins/maths";
