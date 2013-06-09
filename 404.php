@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area site-content twelve columns">
+	<div id="primary">
 		<div id="content" role="main">
 
 			<article id="post-0" class="post not-found">

@@ -52,6 +52,6 @@
 	</div>
 	<?php tha_header_after(); ?>
 
-	<div id="main" class="site-main row">
+	<div id="main" class="site-main">
 	<?php tha_content_top(); ?>
 

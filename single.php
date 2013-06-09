@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area site-content eight columns">
+	<div id="primary">
 			<div id="content" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>

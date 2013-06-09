@@ -1,0 +1,20 @@
+#main,#colophon{
+    @extend .row;
+}
+#primary{
+    @extend site-content;
+    @extend content-area;
+    @extend .eight;
+    @extend .columns;
+}
+#secondary{
+    @extend .four;
+    @extend .columns;
+}
+.error404 #primary,.site-info,.attachment #primary{
+    @extend .twelve;
+    @extend .columns;
+}
+.attachment #primary{
+    @extend .image-attachment;
+}
