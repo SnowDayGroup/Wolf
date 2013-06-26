@@ -1,6 +1,6 @@
 <?php
 //stolen from Roots - adds h5bp to htaccess
-function madcarbs_add_h5bp_htaccess($content) {
+function wolf_add_h5bp_htaccess($content) {
   global $wp_rewrite;
   $home_path = function_exists('get_home_path') ? get_home_path() : ABSPATH;
   $htaccess_file = $home_path . '.htaccess';
@@ -19,5 +19,5 @@ function madcarbs_add_h5bp_htaccess($content) {
   return $content;
 }
 if (current_theme_supports('h5bp-htaccess')) {
-    add_action('generate_rewrite_rules', 'madcarbs_add_h5bp_htaccess');
+    add_action('generate_rewrite_rules', 'wolf_add_h5bp_htaccess');
 }
