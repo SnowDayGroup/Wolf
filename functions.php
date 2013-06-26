@@ -12,6 +12,7 @@ require get_template_directory() . '/inc/tha-hooks.php'; // Load Theme Hook Alli
 require get_template_directory() . '/inc/jetpack.php';   // Load Jetpack compatibility file.
 require_once( get_template_directory() . '/inc/class-tgm-plugin-activation.php');   // Load TGM Plugin activation
 require get_template_directory() . '/inc/plugin-activation.php';   // Loads our functions to configure TGM Plugin activation
+require get_template_directory() . '/inc/misc.php';
 
 
 /**
