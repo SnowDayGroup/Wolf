@@ -1,10 +1,9 @@
-THIS IS WOLF.
+![wolf](images/readme-header.png)
 ===
 
 ##Wolf is a starter theme for WordPress.
 *You can take Wolf and hack away on it. No need for a parent theme.*
 
-![wolf](images/readme-header.png)
 
 ###Why Wolf is awesome:
 
@@ -46,8 +45,6 @@ Based on [underscores](https://github.com/automattic/_s), Wolf comes with:
 
 Inspiration and Code Borrowed:
 [wp-talon](https://github.com/dustyf/wp-talon), [Bones](http://themble.com/bones/), [Tincap](https://github.com/bradthomas127/tincap), [blueox](https://github.com/AaronHolbrook/blueox)
-
-Photo Credit: [Dennis Matheson](http://www.flickr.com/photos/dennis_matheson/4332300031/)
 
 ---
 
