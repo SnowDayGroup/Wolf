@@ -1,0 +1,33 @@
+h1, h2, h3, h4{
+    font-weight: 100;
+}
+
+a{
+    color: #2980b9;
+    text-decoration: none;
+
+    &:visted{
+        color: #9b59b6;
+
+    }
+}
+
+.entry-title a{
+    font-size: .85em;
+    text-decoration: none;
+    color: $link-color;
+    font-weight: lighter;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.widget-title{
+    font-size: 1em;
+    text-decoration: none;
+    color: $link-color;
+    font-weight: lighter;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#colophon{
+    text-align: center;
+}
