@@ -1,0 +1,18 @@
+#colophon{
+    max-width: 100%;
+    height: 2em;
+    padding: 1em 0;
+    background: #000;
+    margin-top: 1em;
+    color: #666;
+
+    a{
+        color: #999;
+        text-shadow: none;
+        
+        &:hover{
+            color: white;
+            text-shadow: none;
+        }
+    }
+}
