@@ -48,3 +48,8 @@ function wolf_starter_setup() {
 }
 endif; // wolf_starter_setup
 add_action( 'after_setup_theme', 'wolf_starter_setup' );
+
+function wolf_add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
+}
+add_action( 'init', 'wolf_add_editor_styles' );
