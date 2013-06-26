@@ -16,8 +16,7 @@
 		<div class="site-info">
 			<?php do_action( 'wolf_starter_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'wolf_starter' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'wolf_starter' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'wolf_starter' ), 'WOLF', '<a href="http://snowday.io/" rel="designer">Snow Day Group</a>' ); ?>
+			<?php printf( __( 'and  %1$s by %2$s.', 'wolf_starter' ), '<a href="http://github.com/snowdaygroup/Wolf">Wolf</a>', '<a href="http://snowday.io/" rel="designer">Snow Day Group</a>' ); ?>
 		</div><!-- .site-info -->
         <?php tha_footer_bottom(); ?>
 	</footer><!-- #colophon -->
