@@ -10,7 +10,7 @@ function wolf_add_h5bp_htaccess($content) {
     if ($mod_rewrite_enabled) {
       $h5bp_rules = extract_from_markers($htaccess_file, 'HTML5 Boilerplate');
       if ($h5bp_rules === array()) {
-        $filename = dirname(__FILE__) . '/inc/h5bp-htaccess';
+        $filename = dirname(__FILE__) . '/h5bp-htaccess';
         return insert_with_markers($htaccess_file, 'HTML5 Boilerplate', extract_from_markers($filename, 'HTML5 Boilerplate'));
       }
     }
@@ -18,6 +18,5 @@ function wolf_add_h5bp_htaccess($content) {
 
   return $content;
 }
-if (current_theme_supports('h5bp-htaccess')) {
-    add_action('generate_rewrite_rules', 'wolf_add_h5bp_htaccess');
-}
+
+add_action('generate_rewrite_rules', 'wolf_add_h5bp_htaccess');
