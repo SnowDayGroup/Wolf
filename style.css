@@ -5,7 +5,7 @@ Author URI: http://snowday.io
 Description: Wolf is a SASS-powered starter theme for WordPress with a ton of features. Use it to make something awesome.
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.3
+Version: 1.4
 textdomain: wolf_starter;
 
 WOLF is based on _S ("Underscores"), Copyright (c) 2012 Automattic, Inc. http://underscores.me/
@@ -514,9 +514,9 @@ h1, h2, h3, h4 { font-weight: 100; }
 a { color: #2980b9; text-decoration: none; }
 a:visted { color: #9b59b6; }
 
-.entry-title a { font-size: .85em; text-decoration: none; color: #555555; font-weight: lighter; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.entry-title a { font-size: .85em; text-decoration: none; color: #555555; font-weight: 100; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.widget-title { font-size: 1em; text-decoration: none; color: #555555; font-weight: lighter; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.widget-title { font-size: 1em; text-decoration: none; color: #555555; font-weight: 300; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 #colophon { text-align: center; }
 
