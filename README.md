@@ -1,10 +1,9 @@
-THIS IS WOLF.
+![wolf](images/readme-header.png)
 ===
 
 ##Wolf is a starter theme for WordPress.
 *You can take Wolf and hack away on it. No need for a parent theme.*
 
-![wolf](images/readme-header.png)
 
 ###Why Wolf is awesome:
 
