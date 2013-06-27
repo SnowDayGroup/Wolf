@@ -1,13 +1,13 @@
 h1, h2, h3, h4{
-    font-weight: 100;
+    font-weight: $light-weight;
 }
 
 a{
-    color: #2980b9;
+    color: $link-color;
     text-decoration: none;
 
     &:visted{
-        color: #9b59b6;
+        color: $visited-link-color;
 
     }
 }
@@ -15,17 +15,19 @@ a{
 .entry-title a{
     font-size: .85em;
     text-decoration: none;
-    color: $link-color;
-    font-weight: 100;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $title-color;
+    font-weight: $light-weight;
+    font-family: $title-font-stack;
+    letter-spacing: $title-letter-spacing;
 }
 
 .widget-title{
     font-size: 1em;
     text-decoration: none;
-    color: $link-color;
-    font-weight: 300;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $title-color;
+    font-weight: $light-regular-weight;
+    font-family: $title-font-stack;
+    letter-spacing: $title-letter-spacing;
 }
 
 #colophon{

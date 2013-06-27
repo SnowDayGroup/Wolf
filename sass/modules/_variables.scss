@@ -1,23 +1,35 @@
-//These are example settings / Variables you can use in this file
+/////////////////////
+//      Layout     //
+/////////////////////
+
+
+
+
+/////////////////////
+//    Typography   //
+/////////////////////
 
 // Font weights
-$light: 100;
-$regular: 400;
-$bold: 600;
+    $light-weight:             100;
+    $light-regular-weight:     300;
+    $regular-weight:           400;
+    $bold-weight:              600;
+    $base-font-weight:  $regular-weight;
 
-// Base Font
-$base-font-family: sans-serif;
-$base-font-weight: $regular;
-$doc-font-size: 16px;
-$doc-line-height: 1.4;
+// Font Families
+$base-font-family:      sans-serif;
+$fixed-font-family:     monospace;
+$title-font-stack:      "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-// Fixed Font
-$fixed-font-family: monospace;
-$fixed-font-size: 85%;
-
-// Headings
-$header-font-weight: $bold;
+// Font Sizes
+$doc-font-size:         16px;
+$doc-line-height:       1.4;
+$fixed-font-size:       85%;
+$title-letter-spacing:  .07em;
+$header-font-weight:    $bold-weight;
 
 
 // Colors
-$link-color: rgb(85, 85, 85);
+$title-color:           #555555;
+$link-color:            #2980b9;
+$visited-link-color:    #9b59b6;
