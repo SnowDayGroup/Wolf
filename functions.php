@@ -37,6 +37,8 @@ function wolf_starter_setup() {
 
     register_nav_menus( array(
         'primary' => __( 'Primary Menu', 'wolf_starter' ),
+        'footer' => __( 'Footer Menu', 'wolf_starter' ),
+        'top' => __( 'Top Menu', 'wolf_starter' ),
     ) );
 
     /**
