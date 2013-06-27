@@ -50,7 +50,7 @@ function wolf_starter_setup() {
     /*
      * Some opinionated removal of things
     */
-    remove_action('wp_head', 'wlwmanifest_link');
+    remove_action('wp_head', 'wlwmanifest_link'); //remove windows live writer links
     remove_action('wp_head', 'rsd_link');
     
 }
