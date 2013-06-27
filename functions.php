@@ -46,6 +46,12 @@ function wolf_starter_setup() {
      * to change 'wolf_starter' to the name of your theme in all the template files
      */
     load_theme_textdomain( 'wolf_starter', get_template_directory() . '/languages' );
+
+    /*
+     * Some opinionated removal of things
+    */
+    remove_action('wp_head', 'wlwmanifest_link');
+    remove_action('wp_head', 'rsd_link');
     
 }
 endif; // wolf_starter_setup
