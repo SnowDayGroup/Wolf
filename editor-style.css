@@ -471,8 +471,6 @@ img { -ms-interpolation-mode: bicubic; }
 ----------------- */
 .lt-ie8 .clearfix { height: 1%; }
 
-#primary { width: 62.957553% !important; }
-
 /* Collection of Mixins */
 /*------------------------------------*\ helpers
 \*------------------------------------*/
@@ -480,6 +478,10 @@ img { -ms-interpolation-mode: bicubic; }
 /* clearfix ------------------------- */
 /* Variables */
 /* General Styling */
+@media (min-width: 48em) { #primary { width: 62.957553% !important; } }
+
+@media (min-width: 48em) { #secondary { width: 34.914945% !important; padding-top: 2em; } }
+
 .hentry { margin: 0 0 1.5em; }
 
 .entry-meta { clear: both; }
