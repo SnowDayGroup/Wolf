@@ -37,6 +37,8 @@ function wolf_starter_setup() {
 
     register_nav_menus( array(
         'primary' => __( 'Primary Menu', 'wolf_starter' ),
+        'footer' => __( 'Footer Menu', 'wolf_starter' ),
+        'top' => __( 'Top Menu', 'wolf_starter' ),
     ) );
 
     /**
@@ -46,6 +48,12 @@ function wolf_starter_setup() {
      * to change 'wolf_starter' to the name of your theme in all the template files
      */
     load_theme_textdomain( 'wolf_starter', get_template_directory() . '/languages' );
+
+    /*
+     * Some opinionated removal of things
+    */
+    remove_action('wp_head', 'wlwmanifest_link'); //remove windows live writer links
+    remove_action('wp_head', 'rsd_link');
     
 }
 endif; // wolf_starter_setup

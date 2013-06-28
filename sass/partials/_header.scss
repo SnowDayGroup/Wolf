@@ -4,9 +4,9 @@
     a{
         font-size: 1.5em;
         text-decoration: none;
-        color: $link-color;
-        font-weight: 100;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: $title-color;
+        font-weight: $light-weight;
+        font-family: $title-font-stack;
     }
 }
 

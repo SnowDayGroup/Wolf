@@ -1,3 +1,15 @@
+#primary{
+    @include breakpoint('regular'){
+        width: 62.957553% !important;
+    }
+}
+#secondary{
+    @include breakpoint('regular'){
+        width: 34.914945% !important;
+        padding-top: 2em;
+    }
+}
+
 .hentry {
     margin: 0 0 1.5em;
 }
