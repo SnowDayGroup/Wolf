@@ -19,7 +19,11 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
+				<?php do_action('wolf_before_search-results'); ?>
+
 				<?php get_template_part( 'content', 'search' ); ?>
+
+				<?php do_action('wolf_after_search-results'); ?>
 
 			<?php endwhile; ?>
 
