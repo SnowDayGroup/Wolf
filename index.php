@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package wolf_starter
+ * @package wolf
  */
 
 get_header(); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php wolf_starter_content_nav( 'nav-below' ); ?>
+			<?php wolf_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 

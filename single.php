@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package wolf_starter
+ * @package wolf
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
 
-			<?php wolf_starter_content_nav( 'nav-below' ); ?>
+			<?php wolf_content_nav( 'nav-below' ); ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template

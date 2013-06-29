@@ -2,7 +2,7 @@
 /**
  * Enqueue scripts and styles
  */
-function wolf_starter_scripts() {
+function wolf_scripts() {
     global $post;
 
     wp_enqueue_style( 'wolf-style', get_stylesheet_uri() );
@@ -22,10 +22,10 @@ function wolf_starter_scripts() {
     
     wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/modernizr-2.5.3.js', array(),'2.5.3');
 }
-add_action( 'wp_enqueue_scripts', 'wolf_starter_scripts' );
+add_action( 'wp_enqueue_scripts', 'wolf_scripts' );
 
 
-function wolf_starter_script_functions() { ?>
+function wolf_script_functions() { ?>
 
     <script type="text/javascript">
     jQuery(document).ready(function($){
@@ -35,12 +35,12 @@ function wolf_starter_script_functions() { ?>
 
 <?php
 }
-add_action('wp_footer','wolf_starter_script_functions',30);
+add_action('wp_footer','wolf_script_functions',30);
 
 /*
  * Add class attribute to the first <ul> occurence in wp_page_menu for the responsive menu to work without a custom menu
  */
-function wolf_starter_menu_ul_class($ulclass) {
+function wolf_menu_ul_class($ulclass) {
     return preg_replace('/<ul>/', '<ul class="menu">', $ulclass, 1);
 }
-add_filter('wp_page_menu','wolf_starter_menu_ul_class');
+add_filter('wp_page_menu','wolf_menu_ul_class');
