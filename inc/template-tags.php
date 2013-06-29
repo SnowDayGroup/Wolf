@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package wolf_starter
+ * @package wolf
  */
 
-if ( ! function_exists( 'wolf_starter_content_nav' ) ) :
+if ( ! function_exists( 'wolf_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  */
-function wolf_starter_content_nav( $nav_id ) {
+function wolf_content_nav( $nav_id ) {
 	global $wp_query, $post;
 
 	// Don't print empty markup on single pages if there's nowhere to navigate.
@@ -31,21 +31,21 @@ function wolf_starter_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'wolf_starter' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'wolf' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'wolf_starter' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'wolf_starter' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'wolf' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'wolf' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'wolf_starter' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'wolf' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'wolf_starter' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'wolf' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -53,22 +53,22 @@ function wolf_starter_content_nav( $nav_id ) {
 	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
 	<?php
 }
-endif; // wolf_starter_content_nav
+endif; // wolf_content_nav
 
-if ( ! function_exists( 'wolf_starter_comment' ) ) :
+if ( ! function_exists( 'wolf_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  */
-function wolf_starter_comment( $comment, $args, $depth ) {
+function wolf_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 
 	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'wolf_starter' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'wolf_starter' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php _e( 'Pingback:', 'wolf' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'wolf' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -78,20 +78,20 @@ function wolf_starter_comment( $comment, $args, $depth ) {
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
 					<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'wolf_starter' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s <span class="says">says:</span>', 'wolf' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author -->
 
 				<div class="comment-metadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
-							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'wolf_starter' ), get_comment_date(), get_comment_time() ); ?>
+							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'wolf' ), get_comment_date(), get_comment_time() ); ?>
 						</time>
 					</a>
-					<?php edit_comment_link( __( 'Edit', 'wolf_starter' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'wolf' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'wolf_starter' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'wolf' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 
@@ -107,16 +107,16 @@ function wolf_starter_comment( $comment, $args, $depth ) {
 	<?php
 	endif;
 }
-endif; // ends check for wolf_starter_comment()
+endif; // ends check for wolf_comment()
 
 
 if ( ! function_exists( '_s_the_attached_image' ) ) :
 /**
  * Prints the attached image with a link to the next attached image.
  */
-function _wolf_starter_the_attached_image() {
+function _wolf_the_attached_image() {
 	$post                = get_post();
-	$attachment_size     = apply_filters( '_wolf_starter_attachment_size', array( 1200, 1200 ) );
+	$attachment_size     = apply_filters( '_wolf_attachment_size', array( 1200, 1200 ) );
 	$next_attachment_url = wp_get_attachment_url();
 
 	/**
@@ -160,18 +160,18 @@ function _wolf_starter_the_attached_image() {
 endif;
 
 
-if ( ! function_exists( 'wolf_starter_posted_on' ) ) :
+if ( ! function_exists( 'wolf_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function wolf_starter_posted_on() {
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'wolf_starter' ),
+function wolf_posted_on() {
+	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'wolf' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'wolf_starter' ), get_the_author() ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', 'wolf' ), get_the_author() ) ),
 		get_the_author()
 	);
 }
@@ -179,7 +179,7 @@ endif;
 /**
  * Returns true if a blog has more than 1 category
  */
-function wolf_starter_categorized_blog() {
+function wolf_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 		// Create an array of all the categories that are attached to posts
 		$all_the_cool_cats = get_categories( array(
@@ -193,20 +193,20 @@ function wolf_starter_categorized_blog() {
 	}
 
 	if ( '1' != $all_the_cool_cats ) {
-		// This blog has more than 1 category so wolf_starter_categorized_blog should return true
+		// This blog has more than 1 category so wolf_categorized_blog should return true
 		return true;
 	} else {
-		// This blog has only 1 category so wolf_starter_categorized_blog should return false
+		// This blog has only 1 category so wolf_categorized_blog should return false
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in wolf_starter_categorized_blog
+ * Flush out the transients used in wolf_categorized_blog
  */
-function wolf_starter_category_transient_flusher() {
+function wolf_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'all_the_cool_cats' );
 }
-add_action( 'edit_category', 'wolf_starter_category_transient_flusher' );
-add_action( 'save_post', 'wolf_starter_category_transient_flusher' );
+add_action( 'edit_category', 'wolf_category_transient_flusher' );
+add_action( 'save_post', 'wolf_category_transient_flusher' );

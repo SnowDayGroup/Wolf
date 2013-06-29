@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package wolf_starter
+ * @package wolf
  */
 ?><!DOCTYPE html>
 <?php tha_html_before(); ?>
@@ -41,8 +41,8 @@
 				</div>
 
 				<nav id="site-navigation" class="site-navigation main-navigation" role="navigation">
-					<h1 class="screen-reader-text"><?php _e( 'Menu', 'wolf_starter' ); ?></h1>
-					<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'wolf_starter' ); ?>"><?php _e( 'Skip to content', 'wolf_starter' ); ?></a></div>
+					<h1 class="screen-reader-text"><?php _e( 'Menu', 'wolf' ); ?></h1>
+					<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'wolf' ); ?>"><?php _e( 'Skip to content', 'wolf' ); ?></a></div>
 
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</nav><!-- #site-navigation -->
@@ -54,6 +54,3 @@
 
 	<div id="main" class="site-main">
 	<?php tha_content_top(); ?>
-	
-	<?php echo wolf_breadcrumbs(); ?>
-

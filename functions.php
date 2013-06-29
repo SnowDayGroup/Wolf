@@ -1,8 +1,8 @@
 <?php
 /**
- * wolf_starter functions and definitions
+ * wolf functions and definitions
  *
- * @package wolf_starter
+ * @package wolf
  */
 
 require get_template_directory() . '/inc/htaccess.php'; // HTML5 Boilerplate .htaccess
@@ -12,7 +12,6 @@ require get_template_directory() . '/inc/tha-hooks.php'; // Load Theme Hook Alli
 require get_template_directory() . '/inc/jetpack.php';   // Load Jetpack compatibility file.
 require_once( get_template_directory() . '/inc/class-tgm-plugin-activation.php');   // Load TGM Plugin activation
 require get_template_directory() . '/inc/plugin-activation.php';   // Loads our functions to configure TGM Plugin activation
-require get_template_directory() . '/inc/breadcrumbs.php';
 require get_template_directory() . '/inc/misc.php';
 
 
@@ -22,11 +21,11 @@ require get_template_directory() . '/inc/misc.php';
 if ( ! isset( $content_width ) )
     $content_width = 640; /* pixels */
 
-if ( ! function_exists( 'wolf_starter_setup' ) ) :
+if ( ! function_exists( 'wolf_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
-function wolf_starter_setup() {
+function wolf_setup() {
     require( get_template_directory() . '/inc/template-tags.php' ); // Custom template tags for this theme.
     require( get_template_directory() . '/inc/extras.php' ); // Custom functions that act independently of the theme templates
     require( get_template_directory() . '/inc/customizer.php' ); //Customizer additions
@@ -36,18 +35,18 @@ function wolf_starter_setup() {
     add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) ); //Enable support for Post Formats
 
     register_nav_menus( array(
-        'primary' => __( 'Primary Menu', 'wolf_starter' ),
-        'footer' => __( 'Footer Menu', 'wolf_starter' ),
-        'top' => __( 'Top Menu', 'wolf_starter' ),
+        'primary' => __( 'Primary Menu', 'wolf' ),
+        'footer' => __( 'Footer Menu', 'wolf' ),
+        'top' => __( 'Top Menu', 'wolf' ),
     ) );
 
     /**
      * Make theme available for translation
      * Translations can be filed in the /languages/ directory
-     * If you're building a theme based on wolf_starter, use a find and replace
-     * to change 'wolf_starter' to the name of your theme in all the template files
+     * If you're building a theme based on wolf, use a find and replace
+     * to change 'wolf' to the name of your theme in all the template files
      */
-    load_theme_textdomain( 'wolf_starter', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'wolf', get_template_directory() . '/languages' );
 
     /*
      * Some opinionated removal of things
@@ -56,8 +55,8 @@ function wolf_starter_setup() {
     remove_action('wp_head', 'rsd_link');
     
 }
-endif; // wolf_starter_setup
-add_action( 'after_setup_theme', 'wolf_starter_setup' );
+endif; // wolf_setup
+add_action( 'after_setup_theme', 'wolf_setup' );
 
 function wolf_add_editor_styles() {
     add_editor_style( 'editor-style.css' );
