@@ -14,6 +14,8 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<?php do_action('wolf_before_no_results'); ?>
+
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
 			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wolf' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
@@ -29,5 +31,8 @@
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>
+
+		<?php do_action('wolf_after_no_results'); ?>
+
 	</div><!-- .entry-content -->
 </article><!-- #post-0 .post .no-results .not-found -->
