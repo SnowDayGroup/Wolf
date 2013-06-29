@@ -42,12 +42,11 @@ get_header();
 				<div class="entry-content">
 					<div class="entry-attachment">
 						<div class="attachment">
+							
+							<?php do_action('wolf_before_attached_image'); ?>
 							<?php _wolf_the_attached_image(); ?>
+							<?php do_action('wolf_after_attached_image'); ?>
 
-							<a href="<?php echo esc_url($next_attachment_url); ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
-								$attachment_size = apply_filters( 'wolf_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
-								echo wp_get_attachment_image( get_the_ID(), $attachment_size );
-							?></a>
 						</div><!-- .attachment -->
 
 						<?php if ( has_excerpt() ) : ?>
