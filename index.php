@@ -21,6 +21,8 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
+				<?php do_action('wolf_before_index_content'); ?>
+
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to overload this in a child theme then include a file
@@ -28,6 +30,8 @@ get_header(); ?>
 					 */
 					get_template_part( 'content', get_post_format() );
 				?>
+
+				<?php do_action('wolf_after_index_content'); ?>
 
 			<?php endwhile; ?>
 
