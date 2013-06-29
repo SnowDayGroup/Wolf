@@ -14,6 +14,9 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+
+		<?php do_action('wolf_before_page'); ?>
+
 		<?php the_content(); ?>
 		<?php 
 			wp_link_pages( array( 
@@ -21,6 +24,9 @@
 				'after' => '</div>',
 			) ); 
 		?>
+
+		<?php do_action('wolf_after_page'); ?>
+
 	</div><!-- .entry-content -->
 	<?php edit_post_link( __( 'Edit', 'wolf' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
     <?php tha_entry_bottom(); ?>
