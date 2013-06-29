@@ -42,7 +42,10 @@
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
+		<?php do_action('wolf_before_comment_list'); ?>
+
 		<ol class="comment-list">
+
 			<?php
 				/* Loop through and list the comments. Tell wp_list_comments()
 				 * to use wolf_comment() to format the comments.
@@ -53,6 +56,9 @@
 				wp_list_comments( array( 'callback' => 'wolf_comment' ) );
 			?>
 		</ol><!-- .comment-list -->
+
+		<?php do_action('wolf_after_comment_list'); ?>
+
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation-comment" role="navigation">
@@ -72,7 +78,11 @@
 		<p class="no-comments"><?php _e( 'Comments are closed.', '_wolf' ); ?></p>
 	<?php endif; ?>
 
+	<?php do_action('wolf_before_comment_form'); ?>
+
 	<?php comment_form(); ?>
+
+	<?php do_action('wolf_after_comment_form'); ?>
 
 </div><!-- #comments -->
 <?php tha_comments_after(); ?>
