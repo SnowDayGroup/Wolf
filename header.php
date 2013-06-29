@@ -54,6 +54,3 @@
 
 	<div id="main" class="site-main">
 	<?php tha_content_top(); ?>
-	
-	<?php echo wolf_breadcrumbs(); ?>
-
