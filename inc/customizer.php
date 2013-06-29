@@ -1,8 +1,8 @@
 <?php
 /**
- * wolf_starter Theme Customizer
+ * wolf Theme Customizer
  *
- * @package wolf_starter
+ * @package wolf
  */
 
 /**
@@ -10,20 +10,20 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function wolf_starter_customize_register( $wp_customize ) {
+function wolf_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
-add_action( 'customize_register', 'wolf_starter_customize_register' );
+add_action( 'customize_register', 'wolf_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function wolf_starter_customize_preview_js() {
-	wp_enqueue_script( 'wolf_starter_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130304', true );
+function wolf_customize_preview_js() {
+	wp_enqueue_script( 'wolf_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130304', true );
 }
-add_action( 'customize_preview_init', 'wolf_starter_customize_preview_js' );
+add_action( 'customize_preview_init', 'wolf_customize_preview_js' );
 
 
 /**
@@ -38,13 +38,13 @@ add_action( 'customize_preview_init', 'wolf_starter_customize_preview_js' );
  *
  * Hooks into the after_setup_theme action.
  */
-function wolf_starter_register_custom_background() {
+function wolf_register_custom_background() {
     $args = array(
         'default-color' => 'ffffff',
         'default-image' => '',
     );
 
-    $args = apply_filters( 'wolf_starter_custom_background_args', $args );
+    $args = apply_filters( 'wolf_custom_background_args', $args );
 
     if ( function_exists( 'wp_get_theme' ) ) {
         add_theme_support( 'custom-background', $args );
@@ -55,6 +55,6 @@ function wolf_starter_register_custom_background() {
         add_custom_background();
     }
 }
-add_action( 'after_setup_theme', 'wolf_starter_register_custom_background' );
+add_action( 'after_setup_theme', 'wolf_register_custom_background' );
 
 

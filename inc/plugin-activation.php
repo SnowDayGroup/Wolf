@@ -16,7 +16,7 @@ function wolf_register_required_plugins(){
             'required'  => true,
         ),
     );
-    $theme_text_domain = 'wolf_starter';
+    $theme_text_domain = 'wolf';
 
     $config = array(
         'domain'            => $theme_text_domain,          // Text domain - likely want to be the same as your theme.

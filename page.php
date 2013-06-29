@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package wolf_starter
+ * @package wolf
  */
 
 get_header(); ?>

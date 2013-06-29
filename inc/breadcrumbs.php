@@ -26,11 +26,11 @@ function wolf_breadcrumbs(){
         } elseif( is_archive() ) {
 
             if( is_author() ) {
-                $breadcrumb .= wolf_breadcrumbs_get_home_link() . __( 'Archives', 'wolf_starter' ) . ' ' . __( '/', 'wolf_starter' ) . ' ' . wolf_breadcrumbs_get_author_display_name(); 
+                $breadcrumb .= wolf_breadcrumbs_get_home_link() . __( 'Archives', 'wolf' ) . ' ' . __( '/', 'wolf' ) . ' ' . wolf_breadcrumbs_get_author_display_name(); 
             } elseif( '' != get_query_var( 'year' ) || '' != get_query_var( 'monthnum' ) || '' != get_query_var( 'm' ) || '' != get_query_var( 'day' ) ) {
-                $breadcrumb .= wolf_breadcrumbs_get_home_link() . __( 'Archives', 'wolf_starter' ) . ' ' . __( '/', 'wolf_starter' ) . ' ' . wolf_breadcrumbs_get_date_labels(); 
+                $breadcrumb .= wolf_breadcrumbs_get_home_link() . __( 'Archives', 'wolf' ) . ' ' . __( '/', 'wolf' ) . ' ' . wolf_breadcrumbs_get_date_labels(); 
             } else {
-                $breadcrumb .= wolf_breadcrumbs_get_home_link() . __( 'Archives', 'wolf_starter' ) . ' ' . __( '/', 'wolf_starter' ) . ' ' . wolf_breadcrumbs_get_category_links();
+                $breadcrumb .= wolf_breadcrumbs_get_home_link() . __( 'Archives', 'wolf' ) . ' ' . __( '/', 'wolf' ) . ' ' . wolf_breadcrumbs_get_category_links();
             }
         }
         
@@ -43,7 +43,7 @@ function wolf_breadcrumbs(){
 }
 
 function wolf_breadcrumbs_get_home_link() {
-    return '<li class="home-breadcrumb"><a href="' . home_url() . '" itemprop="url"><span itemprop="title">' . __( 'Home', 'wolf_starter' ) . '</span></a><span class="divider">/</span></li>';
+    return '<li class="home-breadcrumb"><a href="' . home_url() . '" itemprop="url"><span itemprop="title">' . __( 'Home', 'wolf' ) . '</span></a><span class="divider">/</span></li>';
 }
 
 function wolf_breadcrumbs_get_category_links( $page_id = '' ) {

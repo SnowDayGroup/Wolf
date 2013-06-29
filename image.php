@@ -2,7 +2,7 @@
 /**
  * The template for displaying image attachments.
  *
- * @package wolf_starter
+ * @package wolf
  */
 
 get_header();
@@ -20,7 +20,7 @@ get_header();
 					<div class="entry-meta">
 						<?php
 							$metadata = wp_get_attachment_metadata();
-							printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'wolf_starter' ),
+							printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'wolf' ),
 								esc_attr( get_the_date( 'c' ) ),
 								esc_html( get_the_date() ),
 								wp_get_attachment_url(),
@@ -34,18 +34,18 @@ get_header();
 					</div><!-- .entry-meta -->
 
 					<nav role="navigation" id="image-navigation" class="navigation-image">
-						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'wolf_starter' ) ); ?></div>
-						<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'wolf_starter' ) ); ?></div>
+						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'wolf' ) ); ?></div>
+						<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'wolf' ) ); ?></div>
 					</nav><!-- #image-navigation -->
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
 					<div class="entry-attachment">
 						<div class="attachment">
-							<?php _wolf_starter_the_attached_image(); ?>
+							<?php _wolf_the_attached_image(); ?>
 
 							<a href="<?php echo esc_url($next_attachment_url); ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
-								$attachment_size = apply_filters( 'wolf_starter_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
+								$attachment_size = apply_filters( 'wolf_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
 								echo wp_get_attachment_image( get_the_ID(), $attachment_size );
 							?></a>
 						</div><!-- .attachment -->
@@ -60,7 +60,7 @@ get_header();
 					<?php
 						the_content();
 						wp_link_pages( array( 
-							'before' => '<div class="page-links">' . __( 'Pages:', 'wolf_starter' ), 
+							'before' => '<div class="page-links">' . __( 'Pages:', 'wolf' ), 
 							'after' => '</div>',
 						) ); 
 					?>

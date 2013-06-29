@@ -13,7 +13,7 @@
  *	<?php } // if ( ! empty( $header_image ) ) ?>
  *
  *
- * @package wolf_starter
+ * @package wolf
  */
 
 /**
@@ -26,25 +26,25 @@
  *
  * @todo Rework this function to remove WordPress 3.4 support when WordPress 3.6 is released.
  *
- * @uses wolf_starter_header_style()
- * @uses wolf_starter_admin_header_style()
- * @uses wolf_starter_admin_header_image()
+ * @uses wolf_header_style()
+ * @uses wolf_admin_header_style()
+ * @uses wolf_admin_header_image()
  *
- * @package wolf_starter
+ * @package wolf
  */
-function wolf_starter_custom_header_setup() {
+function wolf_custom_header_setup() {
 	$args = array(
 		'default-image'          => '',
 		'default-text-color'     => '000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'wolf_starter_header_style',
-		'admin-head-callback'    => 'wolf_starter_admin_header_style',
-		'admin-preview-callback' => 'wolf_starter_admin_header_image',
+		'wp-head-callback'       => 'wolf_header_style',
+		'admin-head-callback'    => 'wolf_admin_header_style',
+		'admin-preview-callback' => 'wolf_admin_header_image',
 	);
 
-	$args = apply_filters( 'wolf_starter_custom_header_args', $args );
+	$args = apply_filters( 'wolf_custom_header_args', $args );
 
 	if ( function_exists( 'wp_get_theme' ) ) {
 		add_theme_support( 'custom-header', $args );
@@ -57,7 +57,7 @@ function wolf_starter_custom_header_setup() {
 		add_custom_image_header( $args['wp-head-callback'], $args['admin-head-callback'], $args['admin-preview-callback'] );
 	}
 }
-add_action( 'after_setup_theme', 'wolf_starter_custom_header_setup' );
+add_action( 'after_setup_theme', 'wolf_custom_header_setup' );
 
 /**
  * Shiv for get_custom_header().
@@ -70,7 +70,7 @@ add_action( 'after_setup_theme', 'wolf_starter_custom_header_setup' );
  * @todo Remove this function when WordPress 3.6 is released.
  * @return stdClass All properties represent attributes of the curent header image.
  *
- * @package wolf_starter
+ * @package wolf
  */
 
 if ( ! function_exists( 'get_custom_header' ) ) {
@@ -84,13 +84,13 @@ if ( ! function_exists( 'get_custom_header' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wolf_starter_header_style' ) ) :
+if ( ! function_exists( 'wolf_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see wolf_starter_custom_header_setup().
+ * @see wolf_custom_header_setup().
  */
-function wolf_starter_header_style() {
+function wolf_header_style() {
 
 	$header_text_color = get_header_textcolor();
 
@@ -123,15 +123,15 @@ function wolf_starter_header_style() {
 	</style>
 	<?php
 }
-endif; // wolf_starter_header_style
+endif; // wolf_header_style
 
-if ( ! function_exists( 'wolf_starter_admin_header_style' ) ) :
+if ( ! function_exists( 'wolf_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see wolf_starter_custom_header_setup().
+ * @see wolf_custom_header_setup().
  */
-function wolf_starter_admin_header_style() {
+function wolf_admin_header_style() {
 ?>
 	<style type="text/css">
 	.appearance_page_custom-header #headimg {
@@ -151,15 +151,15 @@ function wolf_starter_admin_header_style() {
 	</style>
 <?php
 }
-endif; // wolf_starter_admin_header_style
+endif; // wolf_admin_header_style
 
-if ( ! function_exists( 'wolf_starter_admin_header_image' ) ) :
+if ( ! function_exists( 'wolf_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see wolf_starter_custom_header_setup().
+ * @see wolf_custom_header_setup().
  */
-function wolf_starter_admin_header_image() { ?>
+function wolf_admin_header_image() { ?>
 	<div id="headimg">
 		<?php
 		if ( 'blank' == $header_text_color || '' == $header_text_color )
@@ -176,4 +176,4 @@ function wolf_starter_admin_header_image() { ?>
 	</div>
 <?php 
 }
-endif; // wolf_starter_admin_header_image
+endif; // wolf_admin_header_image
