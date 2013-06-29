@@ -84,6 +84,8 @@ get_header(); ?>
                     ?>
                 </header><!-- .page-header -->
 
+                <?php do_action('wolf_before_archive_loop'); ?>
+            
                 <?php /* Start the Loop */ ?>
                 <?php while ( have_posts() ) : the_post(); ?>
 
@@ -96,6 +98,8 @@ get_header(); ?>
                     ?>
 
                 <?php endwhile; ?>
+
+                <?php do_action('wolf_after_archive_loop'); ?>
 
             <?php else : ?>
 
