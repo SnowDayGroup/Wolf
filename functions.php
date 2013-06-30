@@ -5,6 +5,10 @@
  * @package wolf
  */
 
+if ( ! isset( $content_width ) )
+    $content_width = 700; /* pixels */
+
+
 if ( ! function_exists( 'wolf_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
