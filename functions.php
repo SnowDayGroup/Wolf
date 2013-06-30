@@ -28,8 +28,8 @@ function wolf_setup() {
 
     register_nav_menus( array(
         'primary' => __( 'Primary Menu', 'wolf' ),
-        'footer' => __( 'Footer Menu', 'wolf' ),
-        'top' => __( 'Top Menu', 'wolf' ),
+        //'footer' => __( 'Footer Menu', 'wolf' ),
+        //'top' => __( 'Top Menu', 'wolf' ),
     ) );
 
     /**
