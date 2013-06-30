@@ -1,11 +1,9 @@
-#primary{
-    @include breakpoint('regular'){
-        width: 62.957553% !important;
-    }
+#primary .left-sidebar{
+    float: right;
 }
+
 #secondary{
     @include breakpoint('regular'){
-        width: 34.914945% !important;
         padding-top: 2em;
     }
 }
