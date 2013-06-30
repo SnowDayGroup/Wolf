@@ -5,22 +5,6 @@
  * @package wolf
  */
 
-require get_template_directory() . '/inc/htaccess.php'; // HTML5 Boilerplate .htaccess
-require get_template_directory() . '/inc/widgets.php';  // Sidebars and widgets
-require get_template_directory() . '/inc/scripts.php';  // Scripts and stylesheets
-require get_template_directory() . '/inc/tha-hooks.php'; // Load Theme Hook Alliance files
-require get_template_directory() . '/inc/jetpack.php';   // Load Jetpack compatibility file.
-require_once( get_template_directory() . '/inc/class-tgm-plugin-activation.php');   // Load TGM Plugin activation
-require get_template_directory() . '/inc/plugin-activation.php';   // Loads our functions to configure TGM Plugin activation
-require get_template_directory() . '/inc/misc.php';
-
-
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) )
-    $content_width = 640; /* pixels */
-
 if ( ! function_exists( 'wolf_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -29,6 +13,14 @@ function wolf_setup() {
     require( get_template_directory() . '/inc/template-tags.php' ); // Custom template tags for this theme.
     require( get_template_directory() . '/inc/extras.php' ); // Custom functions that act independently of the theme templates
     require( get_template_directory() . '/inc/customizer.php' ); //Customizer additions
+    require get_template_directory() . '/inc/htaccess.php'; // HTML5 Boilerplate .htaccess
+    require get_template_directory() . '/inc/widgets.php';  // Sidebars and widgets
+    require get_template_directory() . '/inc/scripts.php';  // Scripts and stylesheets
+    require get_template_directory() . '/inc/tha-hooks.php'; // Load Theme Hook Alliance files
+    require get_template_directory() . '/inc/jetpack.php';   // Load Jetpack compatibility file.
+    require_once( get_template_directory() . '/inc/class-tgm-plugin-activation.php');   // Load TGM Plugin activation
+    require get_template_directory() . '/inc/plugin-activation.php';   // Loads our functions to configure TGM Plugin activation
+    require get_template_directory() . '/inc/shortcodes.php'; // Loads our theme shortcodes
 
     add_theme_support( 'automatic-feed-links' ); //Add default posts and comments RSS feed links to head
     add_theme_support( 'post-thumbnails' ); //Enable support for Post Thumbnails
@@ -52,13 +44,10 @@ function wolf_setup() {
      * Some opinionated removal of things
     */
     remove_action('wp_head', 'wlwmanifest_link'); //remove windows live writer links
-    remove_action('wp_head', 'rsd_link');
+    remove_action('wp_head', 'rsd_link'); //remove really simple discovery stuff
+
+    add_editor_style( 'editor-style.css' );
     
 }
 endif; // wolf_setup
 add_action( 'after_setup_theme', 'wolf_setup' );
-
-function wolf_add_editor_styles() {
-    add_editor_style( 'editor-style.css' );
-}
-add_action( 'init', 'wolf_add_editor_styles' );
