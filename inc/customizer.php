@@ -57,4 +57,10 @@ function wolf_register_custom_background() {
 }
 add_action( 'after_setup_theme', 'wolf_register_custom_background' );
 
-
+/**
+ * Adds a Customize menu option to the appearance menu
+ */
+function wolf_customizer_menu() { 
+    add_theme_page( 'Customize', 'Customize', 'edit_theme_options', 'customize.php' );
+}
+add_action( 'admin_menu', 'wolf_customizer_menu' );
