@@ -28,7 +28,7 @@
 
 <body <?php body_class(); ?>>
 <?php tha_body_top(); ?>
-<div id="page" class="hfeed site">
+<div id="page top" class="hfeed site">
 	<?php tha_header_before(); ?>
 	<?php do_action( 'before' ); ?>
 	<div id="head-container">

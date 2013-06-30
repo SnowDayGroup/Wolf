@@ -26,6 +26,8 @@ Based on [underscores](https://github.com/automattic/_s), Wolf comes with:
 * Grid system based on [Zurb Foundation](http://foundation.zurb.com)
 * HTML5 Boilerplate htaccess rules
 * Tons of handy SASS Mixins to use
+* An awesome SASS file structure.
+* [TGM Plugin Activation](https://github.com/thomasgriffin/TGM-Plugin-Activation) built in.
 
 
 
@@ -39,6 +41,18 @@ Based on [underscores](https://github.com/automattic/_s), Wolf comes with:
  	* Mixins for hiding elements in a variety of ways. ```@include hidden;```, ```@include invisble;```, and ```@include visually-hidden;```
  	* [Even more](http://madr.github.io/css3-sass-mixins/)
  
+
+###Editing Wolf
+
+To edit the theme, you'll need compass & Sass running. You can use Codekit, Prepros, Grunt, or the command line tools.
+
+For more about sass:
+- [sass-lang.com](http://sass-lang.com/).
+- [thesassway.com](http://thesassway.com/).
+- [alistapart.com/article/getting-started-with-sass](http://alistapart.com/article/getting-started-with-sass).
+
+All Sass files are in the `sass` directory and you can edit any one you like. `style.scss` is the main stylesheet. You can see it importing the other scss files. These will all be processed into one file, and are for organizational purposes. Your browser will only be loading `style.css` as usual.
+
  
 ---
 
