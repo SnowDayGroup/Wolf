@@ -4,13 +4,24 @@
 #primary{
     @extend site-content;
     @extend content-area;
-    @extend .eight;
+    @extend .nine;
     @extend .columns;
 }
 #secondary{
-    @extend .four;
+    @extend .three;
     @extend .columns;
 }
+
+#primary .fullwidth{
+    @extend .twelve;
+    @extend .columns;
+}
+
+#primary .leftsidebar{
+    @extend .nine;
+    @extend .columns;
+}
+
 .error404 #primary,.site-info,.attachment #primary{
     @extend .twelve;
     @extend .columns;
