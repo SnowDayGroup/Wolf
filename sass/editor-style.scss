@@ -1,4 +1,29 @@
-@import "style.scss";
+@import "base/s";
+@import "base/foundation-grid";
+@import "base/grid-extends";
+
+/* Collection of Mixins */
+@import "modules/mixins/maths";
+@import "modules/mixins/shapes";
+@import "modules/mixins/misc";
+@import "modules/mixins/typography";
+
+@import "modules/mixins/media-queries";
+
+/* Variables */
+@import "modules/variables";
+
+/* General Styling */
+@import "partials/layout";
+@import "partials/typography";
+
+@import "partials/header";
+@import "partials/menus";
+@import "partials/footer";
+@import "partials/buttons";
+@import "partials/forms";
+@import "partials/media";
+@import "partials/hacks";
 
 /* Add overwrites as needed so that the content of the editor field is attractive and not broken */
 body { 
