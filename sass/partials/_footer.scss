@@ -2,27 +2,27 @@
     max-width: 100%;
     min-height: 2em;
     padding: 1em 0;
-    background: #000;
+    background: $footer-background-color;
     margin-top: 1em;
-    color: #666;
+    color: $footer-text-color;
 
     a{
-        color: #999;
+        color: $footer-link-color;
         text-shadow: none;
         
         &:hover{
-            color: white;
+            color: $footer-link-hover-color;
             text-shadow: none;
         }
     }
 
     .widget-title{
-        color: white;
+        color: $footer-widget-title-color;
     }
 
     #searchform{
         label{
-            color: white;
+            color: $footer-widget-title-color;
         }
     }
 }

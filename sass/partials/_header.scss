@@ -2,41 +2,16 @@
     margin-bottom: 0em;
     
     a{
-        font-size: 1.5em;
+        font-size: $site-title-size;
         text-decoration: none;
         color: $title-color;
-        font-weight: $light-weight;
+        font-weight: $header-font-weight;
         font-family: $title-font-stack;
     }
 }
 
 .site-description{
-    font-size: 1em;
-    font-weight: 100;
+    font-size: $tagline-font-size;
+    font-weight: $tagline-font-weight;
     margin-top: 0em;
-}
-
-.breadcrumb {
-    padding: 4px 17px;
-    margin: 0 0 20px;
-    list-style: none;
-    background-color: rgb(221, 221, 221);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    li{
-        display: inline-block;
-        text-shadow: 0 1px 0 #ffffff;
-        margin-left: .2em;
-        margin-right: .2em;
-
-   
-    }
-    .active{
-        display: inline;
-        max-width: 100%;
-        width: auto;
-        word-wrap: break-word;
-
-    }
 }
