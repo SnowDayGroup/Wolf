@@ -13,6 +13,62 @@
     <?php tha_footer_before(); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
         <?php tha_footer_top(); ?>
+
+        <div class="row">
+            <div class="three columns">
+                <?php if ( ! dynamic_sidebar( 'sidebar-left-footer' ) ) : ?>
+
+                    
+                    <aside id="search" class="widget widget_search">
+                        <?php get_search_form(); ?>
+                    </aside>
+
+                <?php endif; // end sidebar widget area ?>
+            </div><!-- first -->
+        
+            <div class="three columns">
+                <?php if ( ! dynamic_sidebar( 'sidebar-center-footer' ) ) : ?>
+                        
+                    <aside id="archives" class="widget">
+                        <h1 class="widget-title"><?php _e( 'Archives', 'wolf' ); ?></h1>
+                        <ul>
+                            <?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+                        </ul>
+                    </aside>
+
+                <?php endif; // end sidebar widget area ?>
+            </div><!-- second -->
+
+            <div class="three columns">
+                <?php if ( ! dynamic_sidebar( 'sidebar-right-footer' ) ) : ?>
+
+                    <aside id="archives" class="widget">
+                        <h1 class="widget-title"><?php _e( 'Archives', 'wolf' ); ?></h1>
+                        <ul>
+                            <?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+                        </ul>
+                    </aside>
+
+                <?php endif; // end sidebar widget area ?>
+            </div><!-- third -->
+        
+            <div class="three columns">
+                <?php if ( ! dynamic_sidebar( 'sidebar-right-footer' ) ) : ?>
+
+                    <aside id="meta" class="widget">
+                        <h1 class="widget-title"><?php _e( 'Meta', 'wolf' ); ?></h1>
+                        <ul>
+                            <?php wp_register(); ?>
+                            <li><?php wp_loginout(); ?></li>
+                            <?php wp_meta(); ?>
+                        </ul>
+                    </aside>
+
+                <?php endif; // end sidebar widget area ?>
+            </div><!-- fourth -->
+        </div>
+
+
 		<div class="site-info">
 			<?php do_action( 'wolf_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'wolf' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'wolf' ), 'WordPress' ); ?></a>
