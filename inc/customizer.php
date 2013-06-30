@@ -64,3 +64,40 @@ function wolf_customizer_menu() {
     add_theme_page( 'Customize', 'Customize', 'edit_theme_options', 'customize.php' );
 }
 add_action( 'admin_menu', 'wolf_customizer_menu' );
+
+
+
+/**
+ * Sample Theme Customizer implementation, here we're modifying the footer text
+ */
+function wolf_customizer( $wp_customize ) {
+
+    //////
+    //  Sample Customizer
+    //////
+
+    $wp_customize->add_section(
+        'wolf_section_one',
+        array(
+            'title' => 'Footer Copyright Text',
+            'description' => 'You can modify the footer copyright text to your hearts content.',
+            'priority' => 35,
+        )
+    );
+    $wp_customize->add_setting(
+        'wolf_footer_text',
+        array(
+            'default' => 'Code is poetry.',
+        )
+    );
+    $wp_customize->add_control(
+        'wolf_footer_text',
+        array(
+            'label' => 'Text',
+            'section' => 'wolf_section_one',
+            'type' => 'text',
+        )
+    );
+
+}
+add_action( 'customize_register', 'wolf_customizer' );

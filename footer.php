@@ -72,6 +72,7 @@
 			<?php do_action( 'wolf_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'wolf' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'wolf' ), 'WordPress' ); ?></a>
 			<?php printf( __( 'and  %1$s by %2$s.', 'wolf' ), '<a href="http://github.com/snowdaygroup/Wolf">Wolf</a>', '<a href="http://snowday.io/" rel="designer">Snow Day Group</a>' ); ?>
+            <p><?php echo get_theme_mod('wolf_footer_text', '');?></p>
 		</div><!-- .site-info -->
         <?php tha_footer_bottom(); ?>
 	</footer><!-- #colophon -->
