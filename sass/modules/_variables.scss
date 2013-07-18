@@ -10,26 +10,47 @@
 /////////////////////
 
 // Font weights
-    $light-weight:             100;
-    $light-regular-weight:     300;
-    $regular-weight:           400;
-    $bold-weight:              600;
-    $base-font-weight:  $regular-weight;
+$light-weight:              100;
+$light-regular-weight:      300;
+$regular-weight:            400;
+$bold-weight:               600;
+
+$base-font-weight:          $regular-weight;
+$header-font-weight:        $light-weight; 
+$tagline-font-weight:       $light-regular-weight;
 
 // Font Families
-$base-font-family:      sans-serif;
-$fixed-font-family:     monospace;
-$title-font-stack:      "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family:          "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fixed-font-family:         monospace;
+$title-font-stack:          $base-font-family;
 
 // Font Sizes
-$doc-font-size:         16px;
-$doc-line-height:       1.4;
-$fixed-font-size:       85%;
-$title-letter-spacing:  .07em;
-$header-font-weight:    $bold-weight;
+$doc-font-size:             16px;
+$doc-line-height:           1.4;
+$fixed-font-size:           85%;
+$title-letter-spacing:      .07em;
+$header-font-weight:        $bold-weight;
 
+$site-title-size:           1.5em;
+$tagline-font-size:         1em;
+
+$entry-title-size:          .85em;
+$widget-title-size:         1em;
+
+/////////////////////
+//    Colors       //
+/////////////////////
 
 // Colors
-$title-color:           #555555;
-$link-color:            #2980b9;
-$visited-link-color:    #9b59b6;
+$title-color:               #555555;
+$link-color:                #2980b9;
+$visited-link-color:        #9b59b6;
+
+$footer-background-color:   #2E2E2E;
+$footer-link-color:         #EEEEEE;
+$footer-link-hover-color:   #FFFFFF;
+$footer-text-color:         #666666;
+
+$widget-title-color:        #555555;
+$footer-widget-title-color: #FFFFFF;
+

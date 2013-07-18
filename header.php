@@ -32,23 +32,21 @@
 	<?php tha_header_before(); ?>
 	<?php do_action( 'before' ); ?>
 	<div id="head-container">
-		<div class="row">
-			<header id="masthead" class="site-header" role="banner">
-				<?php tha_header_top(); ?>
-				<div class="site-branding">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				</div>
+		<header id="masthead" class="site-header" role="banner">
+			<?php tha_header_top(); ?>
+			<div class="site-branding">
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</div>
 
-				<nav id="site-navigation" class="site-navigation main-navigation" role="navigation">
-					<h1 class="screen-reader-text"><?php _e( 'Menu', 'wolf' ); ?></h1>
-					<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'wolf' ); ?>"><?php _e( 'Skip to content', 'wolf' ); ?></a></div>
+			<nav id="site-navigation" class="site-navigation main-navigation" role="navigation">
+				<h1 class="screen-reader-text"><?php _e( 'Menu', 'wolf' ); ?></h1>
+				<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'wolf' ); ?>"><?php _e( 'Skip to content', 'wolf' ); ?></a></div>
 
-					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				</nav><!-- #site-navigation -->
-				<?php tha_header_bottom(); ?>
-			</header><!-- #masthead -->
-		</div>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			</nav><!-- #site-navigation -->
+			<?php tha_header_bottom(); ?>
+		</header><!-- #masthead -->
 	</div>
 	<?php tha_header_after(); ?>
 

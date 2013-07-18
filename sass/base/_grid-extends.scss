@@ -1,4 +1,7 @@
-#main,#colophon{
+#main,
+#colophon,
+#head-container,
+#footer-widgets{
     @extend .row;
 }
 #primary{
@@ -22,7 +25,14 @@
     @extend .columns;
 }
 
-.error404 #primary,.site-info,.attachment #primary{
+.footer-widget{
+    @extend .three;
+    @extend .columns;
+}
+
+.error404 #primary,
+.site-info,
+.attachment #primary{
     @extend .twelve;
     @extend .columns;
 }
