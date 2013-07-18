@@ -23,15 +23,9 @@ function wolf_setup() {
     require get_template_directory() . '/inc/tha-hooks.php'; // Load Theme Hook Alliance files
     require get_template_directory() . '/inc/jetpack.php';   // Load Jetpack compatibility file.
 
-    require get_template_directory() . '/inc/removals.php';   // Our functions that remove stuff from WP
-
-    require_once( get_template_directory() . '/inc/class-tgm-plugin-activation.php');   // Load TGM Plugin activation
-    require get_template_directory() . '/inc/plugin-activation.php';   // Loads our functions to configure TGM Plugin activation
-
     require get_template_directory() . '/inc/shortcodes.php'; // Loads our theme shortcodes
 
     add_theme_support( 'automatic-feed-links' ); //Add default posts and comments RSS feed links to head
-    add_theme_support( 'post-thumbnails' ); //Enable support for Post Thumbnails
     add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) ); //Enable support for Post Formats
 
     register_nav_menus( array(
