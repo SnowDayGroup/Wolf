@@ -1,14 +1,18 @@
 /*
-Theme Name: Wolf
-Author: Brad Parbs, Snow Day Group
-Author URI: http://snowday.io
+Theme Name: Wolf Starter
+Author: Brad Parbs
+Author URI: http://bradparbs.com
 Description: Wolf is a SASS-powered starter theme for WordPress with a ton of features. Use it to make something awesome.
+Tags: black, white, flexible-width, two-columns, one-column, right-sidebar, custom-menu, full-width-template, post-formats, sticky-post, translation-ready, threaded-comments, rtl-language-support, custom-colors
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.4.1
+Version: 1.4.4
 textdomain: wolf;
+Wolf Starter WordPress Theme, Copyright 2013 Brad Parbs
+Wolf Starter is distributed under the terms of the GNU GPL
 
 Wolf is based on _S ("Underscores"), Copyright (c) 2012 Automattic, Inc. http://underscores.me/
+
 */
 /* Reset, _s, Grid System */
 /* 
@@ -603,3 +607,7 @@ li > ul, li > ol { margin-bottom: 0; }
 
 /* Search widget */
 #searchsubmit { display: none; }
+
+.sticky{}
+.bypostauthor{}
+.gallery-caption{}
