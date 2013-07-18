@@ -15,17 +15,6 @@
  */
 add_filter('widget_text', 'do_shortcode');
 
-
-/**
- * Increase backtrack limit (see http://core.trac.wordpress.org/ticket/8553)
- *
- *  Props to Brian Richards (@rzen) and StartBox
- * @since 1.4.1
- */
-@ini_set('pcre.backtrack_limit', 500000);
-
-
-
 /**
  * Shortcode to display Return To Top link
  *
