@@ -5,6 +5,10 @@
  * @package wolf
  */
 
+if ( ! isset( $content_width ) )
+    $content_width = 700; /* pixels */
+
+
 if ( ! function_exists( 'wolf_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -18,6 +22,8 @@ function wolf_setup() {
     require get_template_directory() . '/inc/scripts.php';  // Scripts and stylesheets
     require get_template_directory() . '/inc/tha-hooks.php'; // Load Theme Hook Alliance files
     require get_template_directory() . '/inc/jetpack.php';   // Load Jetpack compatibility file.
+
+    require get_template_directory() . '/inc/removals.php';   // Our functions that remove stuff from WP
 
     require_once( get_template_directory() . '/inc/class-tgm-plugin-activation.php');   // Load TGM Plugin activation
     require get_template_directory() . '/inc/plugin-activation.php';   // Loads our functions to configure TGM Plugin activation
@@ -41,12 +47,6 @@ function wolf_setup() {
      * to change 'wolf' to the name of your theme in all the template files
      */
     load_theme_textdomain( 'wolf', get_template_directory() . '/languages' );
-
-    /*
-     * Some opinionated removal of things
-    */
-    remove_action('wp_head', 'wlwmanifest_link'); //remove windows live writer links
-    remove_action('wp_head', 'rsd_link'); //remove really simple discovery stuff
 
     add_editor_style( 'editor-style.css' );
     

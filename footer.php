@@ -13,9 +13,8 @@
     <?php tha_footer_before(); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
         <?php tha_footer_top(); ?>
-
-        <div class="row">
-            <div class="three columns">
+        <div id="footer-widgets">
+            <div class="footer-widget left">
                 <?php if ( ! dynamic_sidebar( 'sidebar-left-footer' ) ) : ?>
 
                     
@@ -26,7 +25,7 @@
                 <?php endif; // end sidebar widget area ?>
             </div><!-- first -->
         
-            <div class="three columns">
+            <div class="footer-widget center">
                 <?php if ( ! dynamic_sidebar( 'sidebar-center-footer' ) ) : ?>
                         
                     <aside id="archives" class="widget">
@@ -39,7 +38,7 @@
                 <?php endif; // end sidebar widget area ?>
             </div><!-- second -->
 
-            <div class="three columns">
+            <div class="footer-widget right">
                 <?php if ( ! dynamic_sidebar( 'sidebar-right-footer' ) ) : ?>
 
                     <aside id="archives" class="widget">
