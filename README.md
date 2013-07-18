@@ -1,13 +1,13 @@
-![wolf](images/readme-header.png)
+![wolf starter](images/readme-header.png)
 ===
 
-##Wolf is a starter theme for WordPress.
+##Wolf Starter is a starter theme for WordPress.
 *You can take Wolf and hack away on it. No need for a parent theme.*
 
 
-###Why Wolf is awesome:
+###Why Wolf Starter is awesome:
 
-Based on [underscores](https://github.com/automattic/_s), Wolf comes with:
+Based on [underscores](https://github.com/automattic/_s), Wolf Starter comes with:
 
  * A just right amount of lean, well-commented, modern, HTML5 templates.
  * A helpful 404 template.
@@ -19,7 +19,7 @@ Based on [underscores](https://github.com/automattic/_s), Wolf comes with:
  * The GPL license in license.txt. :) Use it to make something cool
 
 
-###Added to Wolf:
+###Added to Wolf Starter:
 
 * Complete implenmentation of the [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) hooks.
 * Modular SCSS (SASS) based styles

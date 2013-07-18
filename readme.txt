@@ -1,13 +1,13 @@
-=== Wolf ===
+=== Wolf Starter ===
 
-Wolf is a SASS-powered starter theme for WordPress with a ton of features.
+Wolf Starter is a SASS-powered starter theme for WordPress with a ton of features. Wolf Starter is not meant for beginners, but rather for developers looking to use SASS to develop WordPress themes.
 
 == Description ==
 
-Wolf is a SASS-powered starter theme for WordPress with a ton of features. Use it to make something awesome.
-http://github.com/snowdaygroup/wolf
+Wolf Starter is a SASS-powered starter theme for WordPress with a ton of features. Use it to make something awesome.
+Wolf Starter is not meant for beginners, but rather for developers looking to use SASS to develop WordPress themes. Wolf Starter is a great look at how to structure a SASS-based WordPress theme, and is a great way to learn.
 
-Based on underscores (https://github.com/automattic/_s), Wolf comes with:
+Based on underscores (https://github.com/automattic/_s), Wolf Starter comes with:
 
  * A just right amount of lean, well-commented, modern, HTML5 templates.
  * A helpful 404 template.
@@ -19,7 +19,7 @@ Based on underscores (https://github.com/automattic/_s), Wolf comes with:
  * The GPL license in license.txt. :) Use it to make something cool
 
 
-= Added to Wolf: =
+= Added to Wolf Starter: =
 
 * Complete implenmentation of the [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) hooks.
 * Modular SCSS (SASS) based styles
