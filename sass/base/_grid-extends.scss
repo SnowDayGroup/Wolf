@@ -5,8 +5,8 @@
     @extend .row;
 }
 #primary{
-    @extend site-content;
-    @extend content-area;
+    @extend .site-content;
+    @extend .content-area;
     @extend .nine;
     @extend .columns;
 }
