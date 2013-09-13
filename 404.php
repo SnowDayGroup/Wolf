@@ -16,14 +16,15 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-					
+
 					<?php do_action('wolf_before_404'); ?>
-					
+
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wolf' ); ?></p>
 
 					<?php get_search_form(); ?>
 
-				<?php do_action('wolf_after_404'); ?>
+					<?php do_action('wolf_after_404'); ?>
+
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 .post .not-found -->
 

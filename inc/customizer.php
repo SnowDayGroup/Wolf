@@ -39,28 +39,28 @@ add_action( 'customize_preview_init', 'wolf_customize_preview_js' );
  * Hooks into the after_setup_theme action.
  */
 function wolf_register_custom_background() {
-    $args = array(
-        'default-color' => 'ffffff',
-        'default-image' => '',
-    );
+	$args = array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	);
 
-    $args = apply_filters( 'wolf_custom_background_args', $args );
+	$args = apply_filters( 'wolf_custom_background_args', $args );
 
-    if ( function_exists( 'wp_get_theme' ) ) {
-        add_theme_support( 'custom-background', $args );
-    } else {
-        define( 'BACKGROUND_COLOR', $args['default-color'] );
-        if ( ! empty( $args['default-image'] ) )
-            define( 'BACKGROUND_IMAGE', $args['default-image'] );
-        add_custom_background();
-    }
+	if ( function_exists( 'wp_get_theme' ) ) {
+		add_theme_support( 'custom-background', $args );
+	} else {
+		define( 'BACKGROUND_COLOR', $args['default-color'] );
+		if ( ! empty( $args['default-image'] ) )
+			define( 'BACKGROUND_IMAGE', $args['default-image'] );
+		add_custom_background();
+	}
 }
 add_action( 'after_setup_theme', 'wolf_register_custom_background' );
 
 /**
  * Adds a Customize menu option to the appearance menu
  */
-function wolf_customizer_menu() { 
-    add_theme_page( 'Customize', 'Customize', 'edit_theme_options', 'customize.php' );
+function wolf_customizer_menu() {
+	add_theme_page( 'Customize', 'Customize', 'edit_theme_options', 'customize.php' );
 }
 add_action( 'admin_menu', 'wolf_customizer_menu' );
