@@ -2,6 +2,13 @@
 @import "base/foundation-grid";
 @import "base/grid-extends";
 
+/*Layout */
+@import "base/layouts/content-sidebar";
+@import "base/layouts/content-sidebar-sidebar";
+@import "base/layouts/sidebar-content";
+@import "base/layouts/sidebar-content-sidebar";
+@import "base/layouts/sidebar-sidebar-content";
+
 /* Collection of Mixins */
 @import "modules/mixins/maths";
 @import "modules/mixins/shapes";
