@@ -21,7 +21,6 @@ Based on [underscores](https://github.com/automattic/_s), Wolf comes with:
 
 ###Added to Wolf:
 
-* Complete implenmentation of the [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) hooks.
 * Modular SCSS (SASS) based styles
 * Grid system based on [Zurb Foundation](http://foundation.zurb.com)
 * HTML5 Boilerplate htaccess rules
