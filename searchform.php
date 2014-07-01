@@ -5,6 +5,7 @@
  * @package wolf
  */
 ?>
+
 <?php do_action('wolf_before_search_form'); ?>
 	<form method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 		<label for="s" class="screen-reader-text"><?php _ex( 'Search', 'assistive text', 'wolf' ); ?></label>

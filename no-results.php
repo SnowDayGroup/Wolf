@@ -33,6 +33,5 @@
 		<?php endif; ?>
 
 		<?php do_action('wolf_after_no_results'); ?>
-
 	</div><!-- .entry-content -->
 </article><!-- #post-0 .post .no-results .not-found -->

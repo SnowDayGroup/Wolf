@@ -74,8 +74,8 @@ add_filter( 'wp_title', 'wolf_wp_title', 10, 2 );
  */
 
 function wolf_img_unautop($pee) {
-    $pee = preg_replace('/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '<figure>$1</figure>', $pee);
-    return $pee;
+	$pee = preg_replace('/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '<figure>$1</figure>', $pee);
+	return $pee;
 }
 add_filter( 'the_content', 'wolf_img_unautop', 30 );
 
