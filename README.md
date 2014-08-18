@@ -9,23 +9,23 @@
 
 Based on [underscores](https://github.com/automattic/_s), Wolf comes with:
 
- * A just right amount of lean, well-commented, modern, HTML5 templates.
+ * Just the right amount of lean, well-commented, modern, HTML5 templates.
  * A helpful 404 template.
- * A sample custom header implementation in inc/custom-header.php that can be activated by uncommenting one line in functions.php and adding the code snippet found the comments of inc/custom header.php to your header.php template.
+ * A sample custom header implementation in inc/custom-header.php that can be activated by uncommenting one line in functions.php and adding the code snippet found in the comments of inc/custom header.php to your header.php template.
  * Custom template tags in inc/template-tags that keep your templates clean and neat and prevent code duplication.
  * Some small tweaks in /inc/tweaks.php that can improve your theming experience. They can be activated by uncommenting one line in functions.php.
  * Keyboard navigation for image attachment templates. The script can be found in js/keyboard-navigation.js. It’s enqueued in functions.php.
  * 5 sample CSS layouts in /layouts: Two sidebars on the left, two sidebars on the right, a sidebar on either side of your content, and two-column layouts with sidebars on either side.
- * The GPL license in license.txt. :) Use it to make something cool
+ * The GPL license in license.txt. :) Use it to make something cool.
 
 
 ###Added to Wolf:
 
-* Complete implenmentation of the [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) hooks.
-* Modular SCSS (SASS) based styles
-* Grid system based on [Zurb Foundation](http://foundation.zurb.com)
-* HTML5 Boilerplate htaccess rules
-* Tons of handy SASS Mixins to use
+* Complete implementation of the [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) hooks.
+* Modular SCSS (SASS) based styles.
+* Grid system based on [Zurb Foundation](http://foundation.zurb.com).
+* HTML5 Boilerplate htaccess rules.
+* Tons of handy SASS Mixins to use.
 * An awesome SASS file structure.
 * [TGM Plugin Activation](https://github.com/thomasgriffin/TGM-Plugin-Activation) built in.
 
