@@ -6,7 +6,7 @@
 }
 #primary{
     @extend .site-content;
-    @extend .content-area;
+    @extend .content-area !optional;
     @extend .nine;
     @extend .columns;
 }
@@ -37,5 +37,5 @@
     @extend .columns;
 }
 .attachment #primary{
-    @extend .image-attachment;
+    @extend .image-attachment !optional;
 }
